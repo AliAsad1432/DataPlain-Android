@@ -43,7 +43,7 @@ try {
         KeywordUtil.logWarning('Error: ' + error)
     }
     
-    KeywordUtil.logInfo('Cache and storage cleared for package: ' + 'com.senarios.dataplain')
+    KeywordUtil.logInfo('Cache and storage cleared for package: ' + 'com.senarios.dataplain.dev')
 }
 catch (Exception e) {
     KeywordUtil.markFailed('Failed to clear cache and storage: ' + e.message)
