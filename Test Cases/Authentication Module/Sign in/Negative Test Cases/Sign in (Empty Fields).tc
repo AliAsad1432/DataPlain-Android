@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>5. Email Field Left Empty&#xd;
+   - Test Case: Leave the email &amp; password fields empty and press login&#xd;
+   - Expected Result: An error message appears prompting the user to enter an email &amp; password.</description>
+   <name>Sign in (Empty Fields)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d5e808bd-9c34-4588-8df3-17d0e383fc67</testCaseGuid>
+</TestCaseEntity>

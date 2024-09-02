@@ -1,0 +1,733 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1062576 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (arena.cpp:189), pid=10972, tid=14664
+#
+# JRE version: OpenJDK Runtime Environment Temurin-17.0.7+7 (17.0.7+7) (build 17.0.7+7)
+# Java VM: OpenJDK 64-Bit Server VM Temurin-17.0.7+7 (17.0.7+7, mixed mode, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dgroovy.home=C:\Users\Ali Asad/.groovy -Djava.system.class.loader=groovy.lang.GroovyClassLoader -Xmx2048m -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages org.codehaus.groovy.tools.GroovyStarter --classpath C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin\keyword;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\Keywords;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin\listener;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\Test Listeners;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin\lib;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\Libs;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin\groovy;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\Include\scripts\groovy;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.core_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\aalto-xml-1.0.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\aspectjweaver-1.9.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\bcpkix-jdk15on-1.64.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\bcprov-jdk15on-1.64.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\browsermob-core-2.1.5.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\byte-buddy-1.14.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\byte-buddy-agent-1.14.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\cglib-3.2.10.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\commons-codec-1.10.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\commons-collections4-4.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\commons-validator-1.6.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\curvesapi-1.04.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\dnsjava-2.1.8.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-ant-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-astbuilder-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-cli-picocli-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-console-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-datetime-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-dateutil-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-docgenerator-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-groovydoc-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-groovysh-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-jmx-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-json-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-jsr223-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-macro-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-nio-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-servlet-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-sql-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-swing-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-templates-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-test-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-test-junit5-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-testng-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\groovy-xml-3.0.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\java-client-7.0.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\javax.servlet-api_3.1.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\jna-5.12.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\jna-platform-5.12.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\jzlib-1.1.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\kat-server.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\littleproxy-1.1.0-beta-bmp-17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\log4j-1.2-api-2.17.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\log4j-api-2.17.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\log4j-core-2.17.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\mitm-2.1.5.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\mockito-core-5.2.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\mockito-inline-5.2.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\netty-all-4.1.109.Final.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\objenesis-3.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\poi-3.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\poi-ooxml-3.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\poi-ooxml-schemas-3.17.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\proxy-vole-1.0.4-SNAPSHOT-jar-with-dependencies.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\repackaged-sikuli-api-1.0.2-standalone.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\selenium-leg-rc-3.141.59.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\selenium-server-standalone-3.141.59.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\selenium-shutterbug-1.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\slf4j-api-1.7.25.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\soap-builder-1.0.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\soap-common-1.0.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\soap-legacy-1.0.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\spring-context-5.3.19.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\stax2-api-4.0.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\su.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\testng-7.8.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\wadl.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\xmlbeans-3.1.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\net.sf.supercsv.super-csv_2.1.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.apache.commons.io_2.4.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.apache.commons.lang_2.6.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.google.gson_2.10.1.v20230109-0753.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.jsoup_1.14.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.apache.commons.dbutils_1.6.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.oracle.jdbc.ojdbc7_12.1.0.2.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.postgresql.jdbc_42.7.3.jar;c:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.eclipse.osgi_3.18.300.v20230220-1352.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.constant_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.eclipse.persistence.eclipselink_2.7.11.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.selenium-standalone_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\atu.testrecorder.screen-recorder_2.1.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.google.guava_23.0.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.util_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.apache.httpcomponents.httpclient_4.5.14.v20221207-1049.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.apache.httpcomponents.httpcore_4.4.16.v20221207-1049.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.apache.httpcomponents.httpmime_4.5.13.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.apache.commons.lang3_3.14.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.greenrobot.eventbus_3.1.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\net.bytebuddy.byte-buddy_1.14.15.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.junit_4.13.2.v20211018-1956.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.fasterxml.jackson.core.jackson-databind_2.17.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.fasterxml.jackson.core.jackson-core_2.17.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.fasterxml.jackson.core.jackson-annotations_2.17.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\ch.qos.logback.classic_1.2.13.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\ch.qos.logback.core_1.2.13.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\slf4j.api_1.7.36.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.fusesource.jansi_1.17.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.netlightbody_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.poi_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.apache.commons.commons-text_1.10.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.proxyvole_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.microsoft.sqlserver.mssql-jdbc_6.2.2.jre8.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.github.kklisura.cdt.java-client_2.1.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\javax.websocket-api_1.1.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.glassfish.tyrus.container-grizzly-client_1.13.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.glassfish.grizzly.http-server_2.3.25.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.glassfish.grizzly.framework_2.3.25.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.glassfish.grizzly.http_2.3.25.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.glassfish.tyrus.client_1.13.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.glassfish.tyrus.core_1.13.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.glassfish.tyrus.spi_1.13.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\javassist_3.28.0.GA.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\graphql-java_17.5.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.glassfish.jaxb.runtime_2.3.6.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.glassfish.jaxb.txw2_2.3.6.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.dom4j_2.1.4.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.groovy-extended_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.sun.activation.javax.activation_1.2.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\jakarta.xml.bind-api_2.3.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.sun.xml.bind.jaxb-impl_2.3.6.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.eclipse.jface_3.29.0.v20230214-1401.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.logging_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\json_20240303.0.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\assertj-core_3.25.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.apache.commons.logging_1.2.0.v20180409-1502.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.beanshell.bsh_2.0.0.0b4.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.apache.ant.launcher_1.9.6.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.core.appium_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.api_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.eclipse.equinox.common_3.17.100.v20230202-1341.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.testcloud.core_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.eclipse.e4.core.di.annotations_1.7.200.v20220613-1008.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.eclipse.swt_3.123.0.v20230220-1431.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.configuration.core_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.semver4j_5.3.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.core.webui_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.eclipse.e4.core.contexts_1.11.0.v20220716-0839.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.eclipse.e4.core.services_2.3.400.v20220915-1347.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.core.mobile_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.apache.commons.commons-validator_1.7.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.core.cucumber_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\io.cucumber.core_3.0.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\io.cucumber.datatable_1.1.15.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\io.cucumber.datatable-dependencies_1.1.15.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\io.cucumber.expressions_5.0.19.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\io.cucumber.gherkin_5.0.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\io.cucumber.html_0.2.7.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\io.cucumber.java_3.0.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\io.cucumber.tag-expressions_1.1.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\io.cucumber.junit_3.0.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.core.webservice_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\wsdl4j_1.6.2.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.google.oauth-client.google-oauth-client_1.22.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.google.http-client.google-http-client_1.22.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\ca.juliusdavies.not-yet-commons-ssl_0.3.11.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.preferences_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.apache.xmlbeans_3.1.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.entity_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.antlr.antlr4-runtime_4.9.2.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.networknt.json-schema-validator_1.0.66.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\jakarta.xml.ws-api_2.3.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\javax.xml.soap-api_1.4.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.core.windows_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.core.testng_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\org.eclipse.osgi\28\0\.cp\resources\basic-report\katalon-studio-report-plugin.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.codehaus.groovy_3.0.17.v202303311542-e2303\lib\groovy-3.0.17-indy.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\org.codehaus.groovy_3.0.17.v202303311542-e2303\lib\ivy-2.5.1.jar --main groovy.ui.GroovyMain --encoding UTF-8 --indy C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\Libs\TempTestSuite1724332850380.groovy
+
+Host: Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz, 4 cores, 11G,  Windows 10 , 64 bit Build 19041 (10.0.19041.4597)
+Time: Thu Aug 22 18:21:46 2024 Pakistan Standard Time elapsed time: 55.051560 seconds (0d 0h 0m 55s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001f342287d80):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=14664, stack(0x0000009a76a00000,0x0000009a76b00000)]
+
+
+Current CompileTask:
+C2:  55051 6698       4       groovy.lang.MetaClassImpl$1MOPIter::methodNameAction (325 bytes)
+
+Stack: [0x0000009a76a00000,0x0000009a76b00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67754a]
+V  [jvm.dll+0x834304]
+V  [jvm.dll+0x835aae]
+V  [jvm.dll+0x836113]
+V  [jvm.dll+0x24696f]
+V  [jvm.dll+0xac0ac]
+V  [jvm.dll+0xac67c]
+V  [jvm.dll+0x364de2]
+V  [jvm.dll+0x1bcc02]
+V  [jvm.dll+0x219799]
+V  [jvm.dll+0x218a61]
+V  [jvm.dll+0x1a4d8d]
+V  [jvm.dll+0x2284da]
+V  [jvm.dll+0x226615]
+V  [jvm.dll+0x7ea90b]
+V  [jvm.dll+0x7e4e7a]
+V  [jvm.dll+0x676395]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17374]
+C  [ntdll.dll+0x4cc91]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001f34717e3b0, length=19, elements={
+0x000001f328a50870, 0x000001f3422603e0, 0x000001f342263d10, 0x000001f34224cb70,
+0x000001f342286010, 0x000001f3422868d0, 0x000001f342287190, 0x000001f342287d80,
+0x000001f3422f98e0, 0x000001f3422fc5a0, 0x000001f3423ba1d0, 0x000001f347065320,
+0x000001f34a551c20, 0x000001f34a554770, 0x000001f34a552f60, 0x000001f34a552a90,
+0x000001f34a553900, 0x000001f34a551750, 0x000001f34a5542a0
+}
+
+Java Threads: ( => current thread )
+  0x000001f328a50870 JavaThread "main" [_thread_blocked, id=5796, stack(0x0000009a75d00000,0x0000009a75e00000)]
+  0x000001f3422603e0 JavaThread "Reference Handler" daemon [_thread_blocked, id=5592, stack(0x0000009a76400000,0x0000009a76500000)]
+  0x000001f342263d10 JavaThread "Finalizer" daemon [_thread_blocked, id=17356, stack(0x0000009a76500000,0x0000009a76600000)]
+  0x000001f34224cb70 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13060, stack(0x0000009a76600000,0x0000009a76700000)]
+  0x000001f342286010 JavaThread "Attach Listener" daemon [_thread_blocked, id=7688, stack(0x0000009a76700000,0x0000009a76800000)]
+  0x000001f3422868d0 JavaThread "Service Thread" daemon [_thread_blocked, id=1392, stack(0x0000009a76800000,0x0000009a76900000)]
+  0x000001f342287190 JavaThread "Monitor Deflation Thread" daemon [_thread_blocked, id=14812, stack(0x0000009a76900000,0x0000009a76a00000)]
+=>0x000001f342287d80 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=14664, stack(0x0000009a76a00000,0x0000009a76b00000)]
+  0x000001f3422f98e0 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=10176, stack(0x0000009a76b00000,0x0000009a76c00000)]
+  0x000001f3422fc5a0 JavaThread "Sweeper thread" daemon [_thread_blocked, id=14132, stack(0x0000009a76c00000,0x0000009a76d00000)]
+  0x000001f3423ba1d0 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=3592, stack(0x0000009a76d00000,0x0000009a76e00000)]
+  0x000001f347065320 JavaThread "Notification Thread" daemon [_thread_blocked, id=5392, stack(0x0000009a77200000,0x0000009a77300000)]
+  0x000001f34a551c20 JavaThread "Thread-0" [_thread_blocked, id=16732, stack(0x0000009a77400000,0x0000009a77500000)]
+  0x000001f34a554770 JavaThread "UrlChecker-2" daemon [_thread_blocked, id=17424, stack(0x0000009a77500000,0x0000009a77600000)]
+  0x000001f34a552f60 JavaThread "ForkJoinPool.commonPool-worker-1" daemon [_thread_blocked, id=12216, stack(0x0000009a77800000,0x0000009a77900000)]
+  0x000001f34a552a90 JavaThread "ForkJoinPool.commonPool-worker-2" daemon [_thread_blocked, id=16888, stack(0x0000009a77900000,0x0000009a77a00000)]
+  0x000001f34a553900 JavaThread "ForkJoinPool.commonPool-worker-3" daemon [_thread_blocked, id=9976, stack(0x0000009a77a00000,0x0000009a77b00000)]
+  0x000001f34a551750 JavaThread "OkHttp ConnectionPool" daemon [_thread_blocked, id=2212, stack(0x0000009a77b00000,0x0000009a77c00000)]
+  0x000001f34a5542a0 JavaThread "Okio Watchdog" daemon [_thread_blocked, id=11712, stack(0x0000009a77c00000,0x0000009a77d00000)]
+
+Other Threads:
+  0x000001f3421fe460 VMThread "VM Thread" [stack: 0x0000009a76300000,0x0000009a76400000] [id=15276]
+  0x000001f328a514d0 WatcherThread [stack: 0x0000009a77300000,0x0000009a77400000] [id=2796]
+  0x000001f328aaf130 GCTaskThread "GC Thread#0" [stack: 0x0000009a75e00000,0x0000009a75f00000] [id=6468]
+  0x000001f3425c52a0 GCTaskThread "GC Thread#1" [stack: 0x0000009a76f00000,0x0000009a77000000] [id=5388]
+  0x000001f342baca70 GCTaskThread "GC Thread#2" [stack: 0x0000009a77000000,0x0000009a77100000] [id=16724]
+  0x000001f342bacd20 GCTaskThread "GC Thread#3" [stack: 0x0000009a77100000,0x0000009a77200000] [id=6352]
+  0x000001f328abff80 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000009a75f00000,0x0000009a76000000] [id=9524]
+  0x000001f328ac1180 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000009a76000000,0x0000009a76100000] [id=3304]
+  0x000001f342091cb0 ConcurrentGCThread "G1 Refine#0" [stack: 0x0000009a76100000,0x0000009a76200000] [id=6360]
+  0x000001f342092ec0 ConcurrentGCThread "G1 Service" [stack: 0x0000009a76200000,0x0000009a76300000] [id=11596]
+
+Threads with active compile tasks:
+C2 CompilerThread0    55125 6698       4       groovy.lang.MetaClassImpl$1MOPIter::methodNameAction (325 bytes)
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000080000000, size: 2048 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) not mapped
+Compressed class space mapped at: 0x0000000100000000-0x0000000140000000, reserved size: 1073741824
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3, Narrow klass range: 0x140000000
+
+GC Precious Log:
+ CPUs: 4 total, 4 available
+ Memory: 12180M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (32-bit)
+ Heap Region Size: 1M
+ Heap Min Capacity: 8M
+ Heap Initial Capacity: 192M
+ Heap Max Capacity: 2G
+ Pre-touch: Disabled
+ Parallel Workers: 4
+ Concurrent Workers: 1
+ Concurrent Refinement Workers: 4
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total 95232K, used 46975K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 10 young (10240K), 4 survivors (4096K)
+ Metaspace       used 51235K, committed 51904K, reserved 1114112K
+  class space    used 5834K, committed 6144K, reserved 1048576K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, OA=open archive, CA=closed archive, TAMS=top-at-mark-start (previous, next)
+|   0|0x0000000080000000, 0x0000000080100000, 0x0000000080100000|100%|HS|  |TAMS 0x0000000080100000, 0x0000000080000000| Complete 
+|   1|0x0000000080100000, 0x0000000080200000, 0x0000000080200000|100%|HS|  |TAMS 0x0000000080200000, 0x0000000080100000| Complete 
+|   2|0x0000000080200000, 0x0000000080300000, 0x0000000080300000|100%| O|  |TAMS 0x0000000080300000, 0x0000000080200000| Untracked 
+|   3|0x0000000080300000, 0x0000000080400000, 0x0000000080400000|100%| O|  |TAMS 0x0000000080400000, 0x0000000080300000| Untracked 
+|   4|0x0000000080400000, 0x0000000080500000, 0x0000000080500000|100%| O|  |TAMS 0x0000000080500000, 0x0000000080400000| Untracked 
+|   5|0x0000000080500000, 0x0000000080600000, 0x0000000080600000|100%| O|  |TAMS 0x0000000080600000, 0x0000000080500000| Untracked 
+|   6|0x0000000080600000, 0x0000000080700000, 0x0000000080700000|100%| O|  |TAMS 0x0000000080700000, 0x0000000080600000| Untracked 
+|   7|0x0000000080700000, 0x0000000080800000, 0x0000000080800000|100%| O|  |TAMS 0x0000000080800000, 0x0000000080700000| Untracked 
+|   8|0x0000000080800000, 0x0000000080900000, 0x0000000080900000|100%| O|  |TAMS 0x0000000080900000, 0x0000000080800000| Untracked 
+|   9|0x0000000080900000, 0x0000000080a00000, 0x0000000080a00000|100%|HS|  |TAMS 0x0000000080a00000, 0x0000000080900000| Complete 
+|  10|0x0000000080a00000, 0x0000000080b00000, 0x0000000080b00000|100%| O|  |TAMS 0x0000000080b00000, 0x0000000080a00000| Untracked 
+|  11|0x0000000080b00000, 0x0000000080c00000, 0x0000000080c00000|100%| O|  |TAMS 0x0000000080c00000, 0x0000000080b00000| Untracked 
+|  12|0x0000000080c00000, 0x0000000080d00000, 0x0000000080d00000|100%| O|  |TAMS 0x0000000080d00000, 0x0000000080c00000| Untracked 
+|  13|0x0000000080d00000, 0x0000000080e00000, 0x0000000080e00000|100%| O|  |TAMS 0x0000000080e00000, 0x0000000080d00000| Untracked 
+|  14|0x0000000080e00000, 0x0000000080e16c00, 0x0000000080f00000|  8%| O|  |TAMS 0x0000000080e16c00, 0x0000000080e00000| Untracked 
+|  15|0x0000000080f00000, 0x0000000081000000, 0x0000000081000000|100%| O|  |TAMS 0x0000000081000000, 0x0000000080f00000| Untracked 
+|  16|0x0000000081000000, 0x0000000081100000, 0x0000000081100000|100%| O|  |TAMS 0x0000000081100000, 0x0000000081000000| Untracked 
+|  17|0x0000000081100000, 0x0000000081200000, 0x0000000081200000|100%| O|  |TAMS 0x0000000081200000, 0x0000000081100000| Untracked 
+|  18|0x0000000081200000, 0x0000000081300000, 0x0000000081300000|100%| O|  |TAMS 0x0000000081300000, 0x0000000081200000| Untracked 
+|  19|0x0000000081300000, 0x0000000081400000, 0x0000000081400000|100%| O|  |TAMS 0x0000000081400000, 0x0000000081300000| Untracked 
+|  20|0x0000000081400000, 0x0000000081500000, 0x0000000081500000|100%| O|  |TAMS 0x0000000081500000, 0x0000000081400000| Untracked 
+|  21|0x0000000081500000, 0x0000000081600000, 0x0000000081600000|100%| O|  |TAMS 0x0000000081600000, 0x0000000081500000| Untracked 
+|  22|0x0000000081600000, 0x0000000081700000, 0x0000000081700000|100%| O|  |TAMS 0x0000000081700000, 0x0000000081600000| Untracked 
+|  23|0x0000000081700000, 0x0000000081800000, 0x0000000081800000|100%| O|  |TAMS 0x0000000081800000, 0x0000000081700000| Untracked 
+|  24|0x0000000081800000, 0x0000000081900000, 0x0000000081900000|100%| O|  |TAMS 0x0000000081800000, 0x0000000081800000| Untracked 
+|  25|0x0000000081900000, 0x0000000081a00000, 0x0000000081a00000|100%| O|  |TAMS 0x0000000081900000, 0x0000000081900000| Untracked 
+|  26|0x0000000081a00000, 0x0000000081b00000, 0x0000000081b00000|100%| O|  |TAMS 0x0000000081a00000, 0x0000000081a00000| Untracked 
+|  27|0x0000000081b00000, 0x0000000081c00000, 0x0000000081c00000|100%| O|  |TAMS 0x0000000081c00000, 0x0000000081b00000| Untracked 
+|  28|0x0000000081c00000, 0x0000000081d00000, 0x0000000081d00000|100%| O|  |TAMS 0x0000000081d00000, 0x0000000081c00000| Untracked 
+|  29|0x0000000081d00000, 0x0000000081e00000, 0x0000000081e00000|100%| O|  |TAMS 0x0000000081d8f400, 0x0000000081d00000| Untracked 
+|  30|0x0000000081e00000, 0x0000000081f00000, 0x0000000081f00000|100%| O|  |TAMS 0x0000000081e00000, 0x0000000081e00000| Untracked 
+|  31|0x0000000081f00000, 0x0000000082000000, 0x0000000082000000|100%| O|  |TAMS 0x0000000081f00000, 0x0000000081f00000| Untracked 
+|  32|0x0000000082000000, 0x0000000082100000, 0x0000000082100000|100%| O|  |TAMS 0x0000000082000000, 0x0000000082000000| Untracked 
+|  33|0x0000000082100000, 0x0000000082200000, 0x0000000082200000|100%| O|  |TAMS 0x0000000082100000, 0x0000000082100000| Untracked 
+|  34|0x0000000082200000, 0x0000000082300000, 0x0000000082300000|100%| O|  |TAMS 0x0000000082200000, 0x0000000082200000| Untracked 
+|  35|0x0000000082300000, 0x0000000082400000, 0x0000000082400000|100%| O|  |TAMS 0x0000000082300000, 0x0000000082300000| Untracked 
+|  36|0x0000000082400000, 0x0000000082500000, 0x0000000082500000|100%| O|  |TAMS 0x0000000082400000, 0x0000000082400000| Untracked 
+|  37|0x0000000082500000, 0x00000000825c9000, 0x0000000082600000| 78%| O|  |TAMS 0x0000000082500000, 0x0000000082500000| Untracked 
+|  38|0x0000000082600000, 0x0000000082600000, 0x0000000082700000|  0%| F|  |TAMS 0x0000000082600000, 0x0000000082600000| Untracked 
+|  39|0x0000000082700000, 0x0000000082700000, 0x0000000082800000|  0%| F|  |TAMS 0x0000000082700000, 0x0000000082700000| Untracked 
+|  40|0x0000000082800000, 0x0000000082800000, 0x0000000082900000|  0%| F|  |TAMS 0x0000000082800000, 0x0000000082800000| Untracked 
+|  41|0x0000000082900000, 0x0000000082900000, 0x0000000082a00000|  0%| F|  |TAMS 0x0000000082900000, 0x0000000082900000| Untracked 
+|  42|0x0000000082a00000, 0x0000000082a00000, 0x0000000082b00000|  0%| F|  |TAMS 0x0000000082a00000, 0x0000000082a00000| Untracked 
+|  43|0x0000000082b00000, 0x0000000082b00000, 0x0000000082c00000|  0%| F|  |TAMS 0x0000000082b00000, 0x0000000082b00000| Untracked 
+|  44|0x0000000082c00000, 0x0000000082c00000, 0x0000000082d00000|  0%| F|  |TAMS 0x0000000082c00000, 0x0000000082c00000| Untracked 
+|  45|0x0000000082d00000, 0x0000000082d00000, 0x0000000082e00000|  0%| F|  |TAMS 0x0000000082d00000, 0x0000000082d00000| Untracked 
+|  46|0x0000000082e00000, 0x0000000082e00000, 0x0000000082f00000|  0%| F|  |TAMS 0x0000000082e00000, 0x0000000082e00000| Untracked 
+|  47|0x0000000082f00000, 0x0000000082f00000, 0x0000000083000000|  0%| F|  |TAMS 0x0000000082f00000, 0x0000000082f00000| Untracked 
+|  48|0x0000000083000000, 0x0000000083000000, 0x0000000083100000|  0%| F|  |TAMS 0x0000000083000000, 0x0000000083000000| Untracked 
+|  49|0x0000000083100000, 0x0000000083100000, 0x0000000083200000|  0%| F|  |TAMS 0x0000000083100000, 0x0000000083100000| Untracked 
+|  50|0x0000000083200000, 0x0000000083300000, 0x0000000083300000|100%| S|CS|TAMS 0x0000000083200000, 0x0000000083200000| Complete 
+|  51|0x0000000083300000, 0x0000000083400000, 0x0000000083400000|100%| S|CS|TAMS 0x0000000083300000, 0x0000000083300000| Complete 
+|  52|0x0000000083400000, 0x0000000083500000, 0x0000000083500000|100%| S|CS|TAMS 0x0000000083400000, 0x0000000083400000| Complete 
+|  53|0x0000000083500000, 0x0000000083600000, 0x0000000083600000|100%| S|CS|TAMS 0x0000000083500000, 0x0000000083500000| Complete 
+|  54|0x0000000083600000, 0x0000000083600000, 0x0000000083700000|  0%| F|  |TAMS 0x0000000083600000, 0x0000000083600000| Untracked 
+|  55|0x0000000083700000, 0x0000000083700000, 0x0000000083800000|  0%| F|  |TAMS 0x0000000083700000, 0x0000000083700000| Untracked 
+|  56|0x0000000083800000, 0x0000000083800000, 0x0000000083900000|  0%| F|  |TAMS 0x0000000083800000, 0x0000000083800000| Untracked 
+|  57|0x0000000083900000, 0x0000000083900000, 0x0000000083a00000|  0%| F|  |TAMS 0x0000000083900000, 0x0000000083900000| Untracked 
+|  58|0x0000000083a00000, 0x0000000083a00000, 0x0000000083b00000|  0%| F|  |TAMS 0x0000000083a00000, 0x0000000083a00000| Untracked 
+|  59|0x0000000083b00000, 0x0000000083b00000, 0x0000000083c00000|  0%| F|  |TAMS 0x0000000083b00000, 0x0000000083b00000| Untracked 
+|  60|0x0000000083c00000, 0x0000000083c00000, 0x0000000083d00000|  0%| F|  |TAMS 0x0000000083c00000, 0x0000000083c00000| Untracked 
+|  61|0x0000000083d00000, 0x0000000083d00000, 0x0000000083e00000|  0%| F|  |TAMS 0x0000000083d00000, 0x0000000083d00000| Untracked 
+|  62|0x0000000083e00000, 0x0000000083e00000, 0x0000000083f00000|  0%| F|  |TAMS 0x0000000083e00000, 0x0000000083e00000| Untracked 
+|  63|0x0000000083f00000, 0x0000000083f00000, 0x0000000084000000|  0%| F|  |TAMS 0x0000000083f00000, 0x0000000083f00000| Untracked 
+|  64|0x0000000084000000, 0x0000000084000000, 0x0000000084100000|  0%| F|  |TAMS 0x0000000084000000, 0x0000000084000000| Untracked 
+|  65|0x0000000084100000, 0x0000000084100000, 0x0000000084200000|  0%| F|  |TAMS 0x0000000084100000, 0x0000000084100000| Untracked 
+|  66|0x0000000084200000, 0x0000000084200000, 0x0000000084300000|  0%| F|  |TAMS 0x0000000084200000, 0x0000000084200000| Untracked 
+|  67|0x0000000084300000, 0x0000000084300000, 0x0000000084400000|  0%| F|  |TAMS 0x0000000084300000, 0x0000000084300000| Untracked 
+|  68|0x0000000084400000, 0x0000000084400000, 0x0000000084500000|  0%| F|  |TAMS 0x0000000084400000, 0x0000000084400000| Untracked 
+|  69|0x0000000084500000, 0x0000000084500000, 0x0000000084600000|  0%| F|  |TAMS 0x0000000084500000, 0x0000000084500000| Untracked 
+|  70|0x0000000084600000, 0x0000000084600000, 0x0000000084700000|  0%| F|  |TAMS 0x0000000084600000, 0x0000000084600000| Untracked 
+|  71|0x0000000084700000, 0x0000000084700000, 0x0000000084800000|  0%| F|  |TAMS 0x0000000084700000, 0x0000000084700000| Untracked 
+|  72|0x0000000084800000, 0x0000000084800000, 0x0000000084900000|  0%| F|  |TAMS 0x0000000084800000, 0x0000000084800000| Untracked 
+|  73|0x0000000084900000, 0x0000000084900000, 0x0000000084a00000|  0%| F|  |TAMS 0x0000000084900000, 0x0000000084900000| Untracked 
+|  74|0x0000000084a00000, 0x0000000084a00000, 0x0000000084b00000|  0%| F|  |TAMS 0x0000000084a00000, 0x0000000084a00000| Untracked 
+|  75|0x0000000084b00000, 0x0000000084b00000, 0x0000000084c00000|  0%| F|  |TAMS 0x0000000084b00000, 0x0000000084b00000| Untracked 
+|  76|0x0000000084c00000, 0x0000000084c00000, 0x0000000084d00000|  0%| F|  |TAMS 0x0000000084c00000, 0x0000000084c00000| Untracked 
+|  77|0x0000000084d00000, 0x0000000084d00000, 0x0000000084e00000|  0%| F|  |TAMS 0x0000000084d00000, 0x0000000084d00000| Untracked 
+|  78|0x0000000084e00000, 0x0000000084e00000, 0x0000000084f00000|  0%| F|  |TAMS 0x0000000084e00000, 0x0000000084e00000| Untracked 
+|  79|0x0000000084f00000, 0x0000000084f00000, 0x0000000085000000|  0%| F|  |TAMS 0x0000000084f00000, 0x0000000084f00000| Untracked 
+|  80|0x0000000085000000, 0x0000000085000000, 0x0000000085100000|  0%| F|  |TAMS 0x0000000085000000, 0x0000000085000000| Untracked 
+|  81|0x0000000085100000, 0x0000000085100000, 0x0000000085200000|  0%| F|  |TAMS 0x0000000085100000, 0x0000000085100000| Untracked 
+|  82|0x0000000085200000, 0x0000000085200000, 0x0000000085300000|  0%| F|  |TAMS 0x0000000085200000, 0x0000000085200000| Untracked 
+|  83|0x0000000085300000, 0x0000000085300000, 0x0000000085400000|  0%| F|  |TAMS 0x0000000085300000, 0x0000000085300000| Untracked 
+|  84|0x0000000085400000, 0x0000000085400000, 0x0000000085500000|  0%| F|  |TAMS 0x0000000085400000, 0x0000000085400000| Untracked 
+| 106|0x0000000086a00000, 0x0000000086a00000, 0x0000000086b00000|  0%| F|  |TAMS 0x0000000086a00000, 0x0000000086a00000| Untracked 
+| 107|0x0000000086b00000, 0x0000000086b00000, 0x0000000086c00000|  0%| F|  |TAMS 0x0000000086b00000, 0x0000000086b00000| Untracked 
+| 108|0x0000000086c00000, 0x0000000086d00000, 0x0000000086d00000|100%| E|  |TAMS 0x0000000086c00000, 0x0000000086c00000| Complete 
+| 109|0x0000000086d00000, 0x0000000086e00000, 0x0000000086e00000|100%| E|CS|TAMS 0x0000000086d00000, 0x0000000086d00000| Complete 
+| 110|0x0000000086e00000, 0x0000000086f00000, 0x0000000086f00000|100%| E|CS|TAMS 0x0000000086e00000, 0x0000000086e00000| Complete 
+| 111|0x0000000086f00000, 0x0000000087000000, 0x0000000087000000|100%| E|CS|TAMS 0x0000000086f00000, 0x0000000086f00000| Complete 
+| 112|0x0000000087000000, 0x0000000087100000, 0x0000000087100000|100%| E|CS|TAMS 0x0000000087000000, 0x0000000087000000| Complete 
+| 191|0x000000008bf00000, 0x000000008c000000, 0x000000008c000000|100%| E|CS|TAMS 0x000000008bf00000, 0x000000008bf00000| Complete 
+
+Card table byte_map: [0x000001f33b4c0000,0x000001f33b8c0000] _byte_map_base: 0x000001f33b0c0000
+
+Marking Bits (Prev, Next): (CMBitMap*) 0x000001f328aaf650, (CMBitMap*) 0x000001f328aaf690
+ Prev Bits: [0x000001f33bcc0000, 0x000001f33dcc0000)
+ Next Bits: [0x000001f33dcc0000, 0x000001f33fcc0000)
+
+Polling page: 0x000001f326a10000
+
+Metaspace:
+
+Usage:
+  Non-class:     44.34 MB used.
+      Class:      5.70 MB used.
+       Both:     50.03 MB used.
+
+Virtual space:
+  Non-class space:       64.00 MB reserved,      44.69 MB ( 70%) committed,  1 nodes.
+      Class space:        1.00 GB reserved,       6.00 MB ( <1%) committed,  1 nodes.
+             Both:        1.06 GB reserved,      50.69 MB (  5%) committed. 
+
+Chunk freelists:
+   Non-Class:  2.89 MB
+       Class:  9.83 MB
+        Both:  12.72 MB
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+Initial GC threshold: 21.00 MB
+Current GC threshold: 58.69 MB
+CDS: off
+MetaspaceReclaimPolicy: balanced
+ - commit_granule_bytes: 65536.
+ - commit_granule_words: 8192.
+ - virtual_space_node_default_size: 8388608.
+ - enlarge_chunks_in_place: 1.
+ - new_chunks_are_fully_committed: 0.
+ - uncommit_free_chunks: 1.
+ - use_allocation_guard: 0.
+ - handle_deallocations: 1.
+
+
+Internal statistics:
+
+num_allocs_failed_limit: 6.
+num_arena_births: 838.
+num_arena_deaths: 0.
+num_vsnodes_births: 2.
+num_vsnodes_deaths: 0.
+num_space_committed: 811.
+num_space_uncommitted: 0.
+num_chunks_returned_to_freelist: 6.
+num_chunks_taken_from_freelist: 2213.
+num_chunk_merges: 6.
+num_chunk_splits: 1463.
+num_chunks_enlarged: 948.
+num_inconsistent_stats: 0.
+
+CodeHeap 'non-profiled nmethods': size=120000Kb used=3472Kb max_used=3472Kb free=116527Kb
+ bounds [0x000001f333b90000, 0x000001f333f00000, 0x000001f33b0c0000]
+CodeHeap 'profiled nmethods': size=120000Kb used=10574Kb max_used=10574Kb free=109425Kb
+ bounds [0x000001f32c0c0000, 0x000001f32cb20000, 0x000001f3335f0000]
+CodeHeap 'non-nmethods': size=5760Kb used=2343Kb max_used=2384Kb free=3416Kb
+ bounds [0x000001f3335f0000, 0x000001f333860000, 0x000001f333b90000]
+ total_blobs=6591 nmethods=5725 adapters=778
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+ full_count=0
+
+Compilation events (20 events):
+Event: 54.718 Thread 0x000001f3422f98e0 6696       3       java.util.LinkedList::addFirst (6 bytes)
+Event: 54.718 Thread 0x000001f3422f98e0 nmethod 6696 0x000001f32cb12810 code [0x000001f32cb129a0, 0x000001f32cb12ae8]
+Event: 54.719 Thread 0x000001f342287d80 nmethod 6680 0x000001f333ef1410 code [0x000001f333ef1620, 0x000001f333ef2a70]
+Event: 54.719 Thread 0x000001f342287d80 6681       4       java.lang.invoke.LambdaFormEditor::getInCache (165 bytes)
+Event: 54.726 Thread 0x000001f342287d80 nmethod 6681 0x000001f333ef3710 code [0x000001f333ef38a0, 0x000001f333ef3d18]
+Event: 54.726 Thread 0x000001f342287d80 6693       4       java.lang.invoke.MethodHandle::intrinsicName (4 bytes)
+Event: 54.726 Thread 0x000001f342287d80 nmethod 6693 0x000001f333ef3f90 code [0x000001f333ef4100, 0x000001f333ef4178]
+Event: 54.741 Thread 0x000001f3422f98e0 6697       3       java.util.zip.ZipCoder$UTF8ZipCoder::hasTrailingSlash (20 bytes)
+Event: 54.741 Thread 0x000001f3422f98e0 nmethod 6697 0x000001f32cb12b90 code [0x000001f32cb12d20, 0x000001f32cb12ef8]
+Event: 54.744 Thread 0x000001f342287d80 6698       4       groovy.lang.MetaClassImpl$1MOPIter::methodNameAction (325 bytes)
+Event: 54.756 Thread 0x000001f3422f98e0 6699       3       org.codehaus.groovy.util.SingleKeyHashMap::get (67 bytes)
+Event: 54.757 Thread 0x000001f3422f98e0 nmethod 6699 0x000001f32cb13010 code [0x000001f32cb13200, 0x000001f32cb13898]
+Event: 54.757 Thread 0x000001f3422f98e0 6700       3       java.util.stream.AbstractPipeline::exactOutputSizeIfKnown (86 bytes)
+Event: 54.758 Thread 0x000001f3422f98e0 nmethod 6700 0x000001f32cb13b10 code [0x000001f32cb13d00, 0x000001f32cb14398]
+Event: 54.761 Thread 0x000001f3422f98e0 6701       3       java.util.concurrent.CopyOnWriteArrayList::get (9 bytes)
+Event: 54.761 Thread 0x000001f3422f98e0 nmethod 6701 0x000001f32cb14610 code [0x000001f32cb147c0, 0x000001f32cb14978]
+Event: 54.761 Thread 0x000001f3422f98e0 6703       3       java.lang.StringBuffer::<init> (7 bytes)
+Event: 54.761 Thread 0x000001f3422f98e0 nmethod 6703 0x000001f32cb14a90 code [0x000001f32cb14c20, 0x000001f32cb14d68]
+Event: 54.761 Thread 0x000001f3422f98e0 6702       3       java.util.concurrent.CopyOnWriteArrayList::elementAt (4 bytes)
+Event: 54.761 Thread 0x000001f3422f98e0 nmethod 6702 0x000001f32cb14e10 code [0x000001f32cb14fa0, 0x000001f32cb150b8]
+
+GC Heap History (20 events):
+Event: 6.401 GC heap before
+{Heap before GC invocations=7 (full 0):
+ garbage-first heap   total 78848K, used 56498K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 35 young (35840K), 3 survivors (3072K)
+ Metaspace       used 30021K, committed 30464K, reserved 1114112K
+  class space    used 3200K, committed 3392K, reserved 1048576K
+}
+Event: 6.415 GC heap after
+{Heap after GC invocations=8 (full 0):
+ garbage-first heap   total 78848K, used 26108K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 5 young (5120K), 5 survivors (5120K)
+ Metaspace       used 30021K, committed 30464K, reserved 1114112K
+  class space    used 3200K, committed 3392K, reserved 1048576K
+}
+Event: 6.844 GC heap before
+{Heap before GC invocations=8 (full 0):
+ garbage-first heap   total 78848K, used 57852K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 36 young (36864K), 5 survivors (5120K)
+ Metaspace       used 31814K, committed 32192K, reserved 1114112K
+  class space    used 3396K, committed 3584K, reserved 1048576K
+}
+Event: 6.861 GC heap after
+{Heap after GC invocations=9 (full 0):
+ garbage-first heap   total 78848K, used 27565K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 4 young (4096K), 4 survivors (4096K)
+ Metaspace       used 31814K, committed 32192K, reserved 1114112K
+  class space    used 3396K, committed 3584K, reserved 1048576K
+}
+Event: 7.112 GC heap before
+{Heap before GC invocations=9 (full 0):
+ garbage-first heap   total 78848K, used 62381K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 35 young (35840K), 4 survivors (4096K)
+ Metaspace       used 32970K, committed 33344K, reserved 1114112K
+  class space    used 3476K, committed 3648K, reserved 1048576K
+}
+Event: 7.121 GC heap after
+{Heap after GC invocations=10 (full 0):
+ garbage-first heap   total 95232K, used 28312K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 2 young (2048K), 2 survivors (2048K)
+ Metaspace       used 32970K, committed 33344K, reserved 1114112K
+  class space    used 3476K, committed 3648K, reserved 1048576K
+}
+Event: 7.761 GC heap before
+{Heap before GC invocations=10 (full 0):
+ garbage-first heap   total 95232K, used 71320K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 44 young (45056K), 2 survivors (2048K)
+ Metaspace       used 35157K, committed 35584K, reserved 1114112K
+  class space    used 3718K, committed 3968K, reserved 1048576K
+}
+Event: 7.772 GC heap after
+{Heap after GC invocations=11 (full 0):
+ garbage-first heap   total 95232K, used 29336K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 3 young (3072K), 3 survivors (3072K)
+ Metaspace       used 35157K, committed 35584K, reserved 1114112K
+  class space    used 3718K, committed 3968K, reserved 1048576K
+}
+Event: 8.402 GC heap before
+{Heap before GC invocations=11 (full 0):
+ garbage-first heap   total 95232K, used 73368K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 46 young (47104K), 3 survivors (3072K)
+ Metaspace       used 35525K, committed 35968K, reserved 1114112K
+  class space    used 3738K, committed 3968K, reserved 1048576K
+}
+Event: 8.413 GC heap after
+{Heap after GC invocations=12 (full 0):
+ garbage-first heap   total 95232K, used 30628K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 5 young (5120K), 5 survivors (5120K)
+ Metaspace       used 35525K, committed 35968K, reserved 1114112K
+  class space    used 3738K, committed 3968K, reserved 1048576K
+}
+Event: 8.516 GC heap before
+{Heap before GC invocations=12 (full 0):
+ garbage-first heap   total 95232K, used 56228K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 31 young (31744K), 5 survivors (5120K)
+ Metaspace       used 35559K, committed 35968K, reserved 1114112K
+  class space    used 3742K, committed 3968K, reserved 1048576K
+}
+Event: 8.532 GC heap after
+{Heap after GC invocations=13 (full 0):
+ garbage-first heap   total 95232K, used 32282K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 5 young (5120K), 5 survivors (5120K)
+ Metaspace       used 35559K, committed 35968K, reserved 1114112K
+  class space    used 3742K, committed 3968K, reserved 1048576K
+}
+Event: 20.127 GC heap before
+{Heap before GC invocations=14 (full 0):
+ garbage-first heap   total 95232K, used 75290K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 47 young (48128K), 5 survivors (5120K)
+ Metaspace       used 39559K, committed 40128K, reserved 1114112K
+  class space    used 4281K, committed 4544K, reserved 1048576K
+}
+Event: 20.137 GC heap after
+{Heap after GC invocations=15 (full 0):
+ garbage-first heap   total 95232K, used 34442K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 6 young (6144K), 6 survivors (6144K)
+ Metaspace       used 39559K, committed 40128K, reserved 1114112K
+  class space    used 4281K, committed 4544K, reserved 1048576K
+}
+Event: 31.915 GC heap before
+{Heap before GC invocations=15 (full 0):
+ garbage-first heap   total 95232K, used 73354K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 45 young (46080K), 6 survivors (6144K)
+ Metaspace       used 44998K, committed 45504K, reserved 1114112K
+  class space    used 4990K, committed 5184K, reserved 1048576K
+}
+Event: 31.928 GC heap after
+{Heap after GC invocations=16 (full 0):
+ garbage-first heap   total 95232K, used 37651K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 6 young (6144K), 6 survivors (6144K)
+ Metaspace       used 44998K, committed 45504K, reserved 1114112K
+  class space    used 4990K, committed 5184K, reserved 1048576K
+}
+Event: 33.072 GC heap before
+{Heap before GC invocations=16 (full 0):
+ garbage-first heap   total 95232K, used 74515K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 42 young (43008K), 6 survivors (6144K)
+ Metaspace       used 48970K, committed 49536K, reserved 1114112K
+  class space    used 5538K, committed 5824K, reserved 1048576K
+}
+Event: 33.081 GC heap after
+{Heap after GC invocations=17 (full 0):
+ garbage-first heap   total 95232K, used 39569K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 5 young (5120K), 5 survivors (5120K)
+ Metaspace       used 48970K, committed 49536K, reserved 1114112K
+  class space    used 5538K, committed 5824K, reserved 1048576K
+}
+Event: 50.311 GC heap before
+{Heap before GC invocations=17 (full 0):
+ garbage-first heap   total 95232K, used 76433K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 41 young (41984K), 5 survivors (5120K)
+ Metaspace       used 50986K, committed 51584K, reserved 1114112K
+  class space    used 5801K, committed 6080K, reserved 1048576K
+}
+Event: 50.321 GC heap after
+{Heap after GC invocations=18 (full 0):
+ garbage-first heap   total 95232K, used 41855K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 4 young (4096K), 4 survivors (4096K)
+ Metaspace       used 50986K, committed 51584K, reserved 1114112K
+  class space    used 5801K, committed 6080K, reserved 1048576K
+}
+
+Dll operation events (9 events):
+Event: 0.027 Loaded shared library C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\java.dll
+Event: 0.558 Loaded shared library C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\net.dll
+Event: 0.560 Loaded shared library C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\nio.dll
+Event: 0.571 Loaded shared library C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\zip.dll
+Event: 1.160 Loaded shared library C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\verify.dll
+Event: 1.563 Loaded shared library C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\jimage.dll
+Event: 20.258 Loaded shared library C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\sunmscapi.dll
+Event: 31.953 Loaded shared library C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\management.dll
+Event: 31.960 Loaded shared library C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\management_ext.dll
+
+Deoptimization events (20 events):
+Event: 47.704 Thread 0x000001f328a50870 DEOPT PACKING pc=0x000001f32c15a883 sp=0x0000009a75dfbdb0
+Event: 47.704 Thread 0x000001f328a50870 DEOPT UNPACKING pc=0x000001f333647143 sp=0x0000009a75dfb220 mode 0
+Event: 50.322 Thread 0x000001f328a50870 DEOPT PACKING pc=0x000001f32c75dbca sp=0x0000009a75dfc900
+Event: 50.322 Thread 0x000001f328a50870 DEOPT UNPACKING pc=0x000001f333647143 sp=0x0000009a75dfbda8 mode 0
+Event: 51.093 Thread 0x000001f328a50870 Uncommon trap: trap_request=0xfffffff4 fr.pc=0x000001f333ee9798 relative=0x00000000000002b8
+Event: 51.093 Thread 0x000001f328a50870 Uncommon trap: reason=null_check action=make_not_entrant pc=0x000001f333ee9798 method=sun.invoke.util.VerifyType.isNullConversion(Ljava/lang/Class;Ljava/lang/Class;Z)Z @ 67 c2
+Event: 51.093 Thread 0x000001f328a50870 DEOPT PACKING pc=0x000001f333ee9798 sp=0x0000009a75dfc6e0
+Event: 51.093 Thread 0x000001f328a50870 DEOPT UNPACKING pc=0x000001f3336469a3 sp=0x0000009a75dfc660 mode 2
+Event: 52.982 Thread 0x000001f328a50870 Uncommon trap: trap_request=0xffffff45 fr.pc=0x000001f333eea574 relative=0x0000000000000414
+Event: 52.982 Thread 0x000001f328a50870 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001f333eea574 method=com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.scanContent(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)I @ 122 c2
+Event: 52.982 Thread 0x000001f328a50870 DEOPT PACKING pc=0x000001f333eea574 sp=0x0000009a75dfc4d0
+Event: 52.982 Thread 0x000001f328a50870 DEOPT UNPACKING pc=0x000001f3336469a3 sp=0x0000009a75dfc488 mode 2
+Event: 54.677 Thread 0x000001f328a50870 Uncommon trap: trap_request=0xfffffff4 fr.pc=0x000001f333eebb68 relative=0x0000000000000288
+Event: 54.677 Thread 0x000001f328a50870 Uncommon trap: reason=null_check action=make_not_entrant pc=0x000001f333eebb68 method=sun.invoke.util.VerifyType.isNullConversion(Ljava/lang/Class;Ljava/lang/Class;Z)Z @ 12 c2
+Event: 54.677 Thread 0x000001f328a50870 DEOPT PACKING pc=0x000001f333eebb68 sp=0x0000009a75dfc780
+Event: 54.677 Thread 0x000001f328a50870 DEOPT UNPACKING pc=0x000001f3336469a3 sp=0x0000009a75dfc728 mode 2
+Event: 54.678 Thread 0x000001f328a50870 Uncommon trap: trap_request=0xffffff54 fr.pc=0x000001f333ef03a8 relative=0x0000000000000088
+Event: 54.678 Thread 0x000001f328a50870 Uncommon trap: reason=speculate_null_assert action=make_not_entrant pc=0x000001f333ef03a8 method=java.lang.invoke.LambdaFormEditor.getInCache(Ljava/lang/invoke/LambdaFormEditor$TransformKey;)Ljava/lang/invoke/LambdaForm; @ 37 c2
+Event: 54.678 Thread 0x000001f328a50870 DEOPT PACKING pc=0x000001f333ef03a8 sp=0x0000009a75dfc600
+Event: 54.678 Thread 0x000001f328a50870 DEOPT UNPACKING pc=0x000001f3336469a3 sp=0x0000009a75dfc560 mode 2
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (20 events):
+Event: 44.402 Thread 0x000001f328a50870 Exception <a 'java/lang/NoSuchMethodError'{0x0000000083f0ac40}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, int)'> (0x0000000083f0ac40) 
+thrown [s\src\hotspot\share\interpreter\linkResolver.cpp, line 759]
+Event: 44.403 Thread 0x000001f328a50870 Exception <a 'java/lang/NoSuchMethodError'{0x0000000083f0e8f8}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, int)'> (0x0000000083f0e8f8) 
+thrown [s\src\hotspot\share\interpreter\linkResolver.cpp, line 759]
+Event: 44.404 Thread 0x000001f328a50870 Exception <a 'java/lang/NoSuchMethodError'{0x0000000083f12050}: 'void java.lang.invoke.DelegatingMethodHandle$Holder.reinvoke_L(java.lang.Object, java.lang.Object, java.lang.Object, int)'> (0x0000000083f12050) 
+thrown [s\src\hotspot\share\interpreter\linkResolver.cpp, line 759]
+Event: 44.406 Thread 0x000001f328a50870 Exception <a 'java/lang/NoSuchMethodError'{0x0000000083f22d78}: 'java.lang.Object java.lang.invoke.DelegatingMethodHandle$Holder.delegate(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, int)'> (0x0000000083f22d78) 
+thrown [s\src\hotspot\share\interpreter\linkResolver.cpp, line 759]
+Event: 44.434 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000083e1b980}: com/kms/katalon/core/mobile/keyword/builtin/SetTextKeywordBeanInfo> (0x0000000083e1b980) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 44.442 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000083e50830}: com/kms/katalon/core/mobile/keyword/builtin/SetTextKeywordCustomizer> (0x0000000083e50830) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 46.993 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000083c27e70}: com/kms/katalon/core/mobile/keyword/builtin/PressBackKeywordBeanInfo> (0x0000000083c27e70) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 46.999 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000083c5d370}: com/kms/katalon/core/mobile/keyword/builtin/PressBackKeywordCustomizer> (0x0000000083c5d370) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 47.385 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000083b4f4a8}: java/util/LinkedHashSetBeanInfo> (0x0000000083b4f4a8) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 47.390 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000083b712a0}: java/util/HashSetBeanInfo> (0x0000000083b712a0) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 47.395 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000083b93b88}: java/util/AbstractSetBeanInfo> (0x0000000083b93b88) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 47.397 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000083bb66f0}: java/util/AbstractSetCustomizer> (0x0000000083bb66f0) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 47.400 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000083bdc5b0}: java/util/HashSetCustomizer> (0x0000000083bdc5b0) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 47.404 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000083a090d8}: java/util/LinkedHashSetCustomizer> (0x0000000083a090d8) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 51.093 Thread 0x000001f328a50870 Implicit null exception at 0x000001f333ee958b to 0x000001f333ee9784
+Event: 54.692 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000086e3e9c0}: com/kms/katalon/core/model/FailureHandlingBeanInfo> (0x0000000086e3e9c0) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 54.701 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000086e70a08}: com/kms/katalon/core/model/FailureHandlingCustomizer> (0x0000000086e70a08) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 54.704 Thread 0x000001f328a50870 Exception <a 'java/lang/NoSuchMethodError'{0x0000000086e88278}: 'java.lang.Object java.lang.invoke.Invokers$Holder.linkToCallSite(java.lang.Object, int, java.lang.Object, java.lang.Object)'> (0x0000000086e88278) 
+thrown [s\src\hotspot\share\interpreter\linkResolver.cpp, line 759]
+Event: 54.747 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000086c3a868}: com/kms/katalon/core/keyword/builtin/DelayKeywordBeanInfo> (0x0000000086c3a868) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+Event: 54.755 Thread 0x000001f328a50870 Exception <a 'java/lang/ClassNotFoundException'{0x0000000086c6e518}: com/kms/katalon/core/keyword/builtin/DelayKeywordCustomizer> (0x0000000086c6e518) 
+thrown [s\src\hotspot\share\classfile\systemDictionary.cpp, line 256]
+
+VM Operations (20 events):
+Event: 45.310 Executing VM operation: Cleanup
+Event: 45.310 Executing VM operation: Cleanup done
+Event: 46.321 Executing VM operation: Cleanup
+Event: 46.321 Executing VM operation: Cleanup done
+Event: 47.336 Executing VM operation: Cleanup
+Event: 47.336 Executing VM operation: Cleanup done
+Event: 48.337 Executing VM operation: Cleanup
+Event: 48.337 Executing VM operation: Cleanup done
+Event: 49.350 Executing VM operation: Cleanup
+Event: 49.350 Executing VM operation: Cleanup done
+Event: 50.311 Executing VM operation: G1CollectForAllocation
+Event: 50.321 Executing VM operation: G1CollectForAllocation done
+Event: 51.331 Executing VM operation: Cleanup
+Event: 51.331 Executing VM operation: Cleanup done
+Event: 52.331 Executing VM operation: Cleanup
+Event: 52.331 Executing VM operation: Cleanup done
+Event: 53.340 Executing VM operation: Cleanup
+Event: 53.340 Executing VM operation: Cleanup done
+Event: 54.352 Executing VM operation: Cleanup
+Event: 54.353 Executing VM operation: Cleanup done
+
+Events (20 events):
+Event: 47.386 loading class java/util/HashSetBeanInfo
+Event: 47.386 loading class java/util/HashSetBeanInfo done
+Event: 47.390 loading class java/util/HashSetBeanInfo
+Event: 47.390 loading class java/util/HashSetBeanInfo done
+Event: 47.391 loading class java/util/AbstractSetBeanInfo
+Event: 47.391 loading class java/util/AbstractSetBeanInfo done
+Event: 47.395 loading class java/util/AbstractSetBeanInfo
+Event: 47.395 loading class java/util/AbstractSetBeanInfo done
+Event: 47.395 loading class java/util/AbstractSetCustomizer
+Event: 47.395 loading class java/util/AbstractSetCustomizer done
+Event: 47.397 loading class java/util/AbstractSetCustomizer
+Event: 47.397 loading class java/util/AbstractSetCustomizer done
+Event: 47.398 loading class java/util/HashSetCustomizer
+Event: 47.398 loading class java/util/HashSetCustomizer done
+Event: 47.400 loading class java/util/HashSetCustomizer
+Event: 47.400 loading class java/util/HashSetCustomizer done
+Event: 47.402 loading class java/util/LinkedHashSetCustomizer
+Event: 47.402 loading class java/util/LinkedHashSetCustomizer done
+Event: 47.404 loading class java/util/LinkedHashSetCustomizer
+Event: 47.404 loading class java/util/LinkedHashSetCustomizer done
+
+
+Dynamic libraries:
+0x00007ff782d00000 - 0x00007ff782d0e000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\javaw.exe
+0x00007fffe3150000 - 0x00007fffe3348000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007fffe1180000 - 0x00007fffe1241000 	C:\Windows\System32\KERNEL32.DLL
+0x00007fffe0c90000 - 0x00007fffe0f86000 	C:\Windows\System32\KERNELBASE.dll
+0x00007fffe0a40000 - 0x00007fffe0b40000 	C:\Windows\System32\ucrtbase.dll
+0x00007fffda670000 - 0x00007fffda687000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\jli.dll
+0x00007fffe1ea0000 - 0x00007fffe203f000 	C:\Windows\System32\USER32.dll
+0x00007fffe1030000 - 0x00007fffe1052000 	C:\Windows\System32\win32u.dll
+0x00007fffe30e0000 - 0x00007fffe310b000 	C:\Windows\System32\GDI32.dll
+0x00007fffe0b70000 - 0x00007fffe0c87000 	C:\Windows\System32\gdi32full.dll
+0x00007fffe0f90000 - 0x00007fffe102d000 	C:\Windows\System32\msvcp_win.dll
+0x00007fffda630000 - 0x00007fffda649000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\VCRUNTIME140.dll
+0x00007fffcf360000 - 0x00007fffcf5fa000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16\COMCTL32.dll
+0x00007fffe2be0000 - 0x00007fffe2c7e000 	C:\Windows\System32\msvcrt.dll
+0x00007fffe1da0000 - 0x00007fffe1dcf000 	C:\Windows\System32\IMM32.DLL
+0x00007fffdbdb0000 - 0x00007fffdbdbc000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\vcruntime140_1.dll
+0x00007fffc28b0000 - 0x00007fffc2941000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\msvcp140.dll
+0x00007fff5ce20000 - 0x00007fff5da68000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\server\jvm.dll
+0x00007fffe2f30000 - 0x00007fffe2fe0000 	C:\Windows\System32\ADVAPI32.dll
+0x00007fffe2b40000 - 0x00007fffe2be0000 	C:\Windows\System32\sechost.dll
+0x00007fffe2e00000 - 0x00007fffe2f23000 	C:\Windows\System32\RPCRT4.dll
+0x00007fffe0b40000 - 0x00007fffe0b67000 	C:\Windows\System32\bcrypt.dll
+0x00007fffdb140000 - 0x00007fffdb149000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007fffe2fe0000 - 0x00007fffe304b000 	C:\Windows\System32\WS2_32.dll
+0x00007fffd19b0000 - 0x00007fffd19d7000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007fffd48b0000 - 0x00007fffd48ba000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007fffde680000 - 0x00007fffde692000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007fffdafd0000 - 0x00007fffdafda000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\jimage.dll
+0x00007fffd2f60000 - 0x00007fffd3144000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007fffd15c0000 - 0x00007fffd15f4000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007fffe09b0000 - 0x00007fffe0a32000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007fffc2730000 - 0x00007fffc2755000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\java.dll
+0x00007fffda580000 - 0x00007fffda598000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\zip.dll
+0x00007fffe22b0000 - 0x00007fffe2a1c000 	C:\Windows\System32\SHELL32.dll
+0x00007fffde880000 - 0x00007fffdf01e000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x00007fffe1250000 - 0x00007fffe15a3000 	C:\Windows\System32\combase.dll
+0x00007fffe0150000 - 0x00007fffe017e000 	C:\Windows\SYSTEM32\Wldp.dll
+0x00007fffe1dd0000 - 0x00007fffe1e9d000 	C:\Windows\System32\OLEAUT32.dll
+0x00007fffe2c80000 - 0x00007fffe2d2d000 	C:\Windows\System32\SHCORE.dll
+0x00007fffe1cc0000 - 0x00007fffe1d15000 	C:\Windows\System32\shlwapi.dll
+0x00007fffe0730000 - 0x00007fffe0754000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007fffcc1d0000 - 0x00007fffcc1e9000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\net.dll
+0x00007fffd7ed0000 - 0x00007fffd7fda000 	C:\Windows\SYSTEM32\WINHTTP.dll
+0x00007fffdfeb0000 - 0x00007fffdff1a000 	C:\Windows\system32\mswsock.dll
+0x00007fffcba60000 - 0x00007fffcba75000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\nio.dll
+0x00007fffda5c0000 - 0x00007fffda5d0000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\verify.dll
+0x00007fffe00a0000 - 0x00007fffe00b8000 	C:\Windows\SYSTEM32\CRYPTSP.dll
+0x00007fffdf7d0000 - 0x00007fffdf804000 	C:\Windows\system32\rsaenh.dll
+0x00007fffe06e0000 - 0x00007fffe070e000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007fffe00c0000 - 0x00007fffe00cc000 	C:\Windows\SYSTEM32\CRYPTBASE.dll
+0x00007fffdfb90000 - 0x00007fffdfbcb000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x00007fffe3050000 - 0x00007fffe3058000 	C:\Windows\System32\NSI.dll
+0x00007fffd8f20000 - 0x00007fffd8f37000 	C:\Windows\SYSTEM32\dhcpcsvc6.DLL
+0x00007fffd9180000 - 0x00007fffd919d000 	C:\Windows\SYSTEM32\dhcpcsvc.DLL
+0x00007fffdfbd0000 - 0x00007fffdfc9a000 	C:\Windows\SYSTEM32\DNSAPI.dll
+0x00007fffdbff0000 - 0x00007fffdbffe000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\sunmscapi.dll
+0x00007fffe0850000 - 0x00007fffe09ae000 	C:\Windows\System32\CRYPT32.dll
+0x00007fffe01c0000 - 0x00007fffe01e9000 	C:\Windows\SYSTEM32\ncrypt.dll
+0x00007fffe0180000 - 0x00007fffe01bb000 	C:\Windows\SYSTEM32\NTASN1.dll
+0x00007fffdbd90000 - 0x00007fffdbd99000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\management.dll
+0x00007fffdafe0000 - 0x00007fffdafeb000 	C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\management_ext.dll
+0x00007fffe2df0000 - 0x00007fffe2df8000 	C:\Windows\System32\PSAPI.DLL
+0x00007fffcd660000 - 0x00007fffcd677000 	C:\Windows\system32\napinsp.dll
+0x00007fffcd640000 - 0x00007fffcd65b000 	C:\Windows\system32\pnrpnsp.dll
+0x00007fffcd620000 - 0x00007fffcd635000 	C:\Windows\system32\wshbth.dll
+0x00007fffdbbf0000 - 0x00007fffdbc0d000 	C:\Windows\system32\NLAapi.dll
+0x00007fffcd600000 - 0x00007fffcd612000 	C:\Windows\System32\winrnr.dll
+0x00007fffd5420000 - 0x00007fffd542a000 	C:\Windows\System32\rasadhlp.dll
+0x00007fffd5440000 - 0x00007fffd54c0000 	C:\Windows\System32\fwpuclnt.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin\server
+
+VM Arguments:
+jvm_args: -Dgroovy.home=C:\Users\Ali Asad/.groovy -Djava.system.class.loader=groovy.lang.GroovyClassLoader -Xmx2048m -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: org.codehaus.groovy.tools.GroovyStarter --classpath C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin\keyword;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\Keywords;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin\listener;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\Test Listeners;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin\lib;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\Libs;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin\groovy;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\Include\scripts\groovy;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.core_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\aalto-xml-1.0.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\aspectjweaver-1.9.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\bcpkix-jdk15on-1.64.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\bcprov-jdk15on-1.64.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\browsermob-core-2.1.5.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\byte-buddy-1.14.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\byte-buddy-agent-1.14.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.
+java_class_path (initial): C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin\keyword;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin\listener;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin\lib;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin\groovy;C:\Users\Ali Asad\Katalon Studio\Data Plain - Android\bin;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\plugins\com.kms.katalon.core_1.0.0.202405291026.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\aalto-xml-1.0.0.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\aspectjweaver-1.9.1.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\bcpkix-jdk15on-1.64.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\bcprov-jdk15on-1.64.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\browsermob-core-2.1.5.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\byte-buddy-1.14.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\byte-buddy-agent-1.14.3.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\cglib-3.2.10.jar;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\configuration\resources\lib\commons-codec-1.10.jar;C:\Users\Ali Asad\.katalon\packages\Katal
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 201326592                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2147483648                                {product} {command line}
+   size_t MaxNewSize                               = 1287651328                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 2147483648                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre
+PATH=C:/Users/Ali Asad/.katalon/packages/Katalon_Studio_Free_Windows_64-9.5.0/Katalon_Studio_Free_Windows_64-9.5.0/jre/bin/server;C:/Users/Ali Asad/.katalon/packages/Katalon_Studio_Free_Windows_64-9.5.0/Katalon_Studio_Free_Windows_64-9.5.0/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\Ali Asad\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\Ali Asad\AppData\Local\Programs\Python\Python312\;C:\Users\Ali Asad\AppData\Local\Microsoft\WindowsApps;C:\Users\Ali Asad\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ali Asad\AppData\Roaming\npm;C:\Program Files\nodejs;C:\Program Files\JetBrains\PyCharm Community Edition 2024.2\bin;;C:\Users\Ali Asad\.katalon\tools\android_sdk\platform-tools;C:\Program Files\Java\jdk-22;C:\Program Files\Common Files\Oracle\Java\javapath;;C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0;:C:\Users\Ali Asad\.katalon\packages\Katalon_Studio_Free_Windows_64-9.5.0\Katalon_Studio_Free_Windows_64-9.5.0\jre\bin
+USERNAME=Ali Asad
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+TMP=C:\Users\ALIASA~1\AppData\Local\Temp
+TEMP=C:\Users\ALIASA~1\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.4597)
+OS uptime: 6 days 1:26 hours
+
+CPU: total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9 microcode 0x21, cx8, cmov, fxsr, ht, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, tsc, tscinvbit, avx, aes, erms, clmul, vzeroupper, clflush
+
+Memory: 4k page, system-wide physical 12180M (724M free)
+TotalPageFile size 22097M (AvailPageFile size 312M)
+current process WorkingSet (physical memory assigned to process): 245M, peak: 256M
+current process commit charge ("private bytes"): 269M, peak: 354M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.7+7) for windows-amd64 JRE (17.0.7+7), built on Apr 18 2023 22:10:42 by "temurin" with MS VC++ 16.7 (VS2019)
+
+END.

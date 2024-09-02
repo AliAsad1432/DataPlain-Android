@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Uncheck Remember Me&#xd;
+   - Test Case: Enter a valid email and password, uncheck the &quot;Remember Me&quot; checkbox.&#xd;
+   - Expected Result: User successfully logs in, and the email is not pre-filled during the next login attempt.</description>
+   <name>Sign in (Uncheck Remember Me)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7d49f083-1a3f-4a77-b476-2984b9c210ad</testCaseGuid>
+</TestCaseEntity>

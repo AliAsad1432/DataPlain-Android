@@ -1,0 +1,15 @@
+{
+  "keywordFileContentHash": "1425F5B647770BD7C7FC7DFE9357E9B5",
+  "keywordClasses": [
+    {
+      "name": "com.test.demo.CustomFuntions",
+      "keywordMethods": [
+        {
+          "name": "printHello",
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "javadocParsed": false
+}

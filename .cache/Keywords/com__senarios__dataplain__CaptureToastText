@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "4789A8CD7ED812A22359DB16D4E9EC83",
+  "keywordClasses": [
+    {
+      "name": "com.senarios.dataplain.CaptureToastText",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": false
+}

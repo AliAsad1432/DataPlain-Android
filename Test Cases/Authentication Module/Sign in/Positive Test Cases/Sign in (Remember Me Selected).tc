@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Valid Email with Remember Me Selected&#xd;
+   - Test Case: Enter a valid email and password, select the &quot;Remember Me&quot; checkbox.&#xd;
+   - Expected Result: User successfully logs in, and the email is pre-filled during the next login attempt.&#xd;
+</description>
+   <name>Sign in (Remember Me Selected)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>639e37c0-7f88-4ee0-925e-975a5a8ae0ce</testCaseGuid>
+</TestCaseEntity>

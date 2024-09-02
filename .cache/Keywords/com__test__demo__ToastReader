@@ -1,0 +1,33 @@
+{
+  "keywordFileContentHash": "F297FE7154DCAC0B1FC2F81F3F038C3D",
+  "keywordClasses": [
+    {
+      "name": "com.test.demo.ToastReader",
+      "keywordMethods": [
+        {
+          "name": "getToastMessage",
+          "parameters": [
+            {
+              "name": "timeout",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "getToastMessage",
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "javadocParsed": false
+}

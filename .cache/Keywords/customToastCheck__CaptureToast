@@ -1,0 +1,35 @@
+{
+  "keywordFileContentHash": "71FF5642A26D88B0669C16DEC691E37C",
+  "keywordClasses": [
+    {
+      "name": "customToastCheck.ToastKeywords",
+      "keywordMethods": [
+        {
+          "name": "getToastMessage",
+          "parameters": [
+            {
+              "name": "timeout",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "getToastMessage",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

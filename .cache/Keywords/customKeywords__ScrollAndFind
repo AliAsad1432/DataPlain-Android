@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "77A97A28CF513E679540FBFE2B09F314",
+  "keywordClasses": [
+    {
+      "name": "customKeywords.ScrollAndFind",
+      "keywordMethods": [
+        {
+          "name": "scrollToElementAndTap",
+          "parameters": [
+            {
+              "name": "maxSwipes",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

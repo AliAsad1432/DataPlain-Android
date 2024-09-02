@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>- Test Case: Enter an invalid email format (e.g., `example.com`, `@example`, `example@.com`) and valid data in other fields.&#xd;
+   - Expected Result: The system should display an error message indicating that the email format is invalid.</description>
+   <name>Sign Up (Invalid Email Format)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1a912653-9462-4a7c-b916-844d2e5bdc35</testCaseGuid>
+</TestCaseEntity>

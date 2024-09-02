@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>3. Unregistered Email&#xd;
+   - Test Case: Enter an email that is not registered in the system with any password.&#xd;
+   - Expected Result: An error message appears indicating that the email is not found, and the user is not logged in.</description>
+   <name>Sign in (Unregistered Email) - p</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fbdc6520-75e0-4269-9c43-679c56c15826</testCaseGuid>
+</TestCaseEntity>

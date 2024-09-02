@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Empty Fields Test:&#xd;
+   - Test Case: Leave all fields empty and tap the &quot;Sign Up&quot; button.&#xd;
+   - Expected Result: The system should display validation errors for all fields, indicating that they cannot be empty.</description>
+   <name>Sign Up (Empty Fields)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ebeea543-62d5-4e9f-8aba-3c20b8225583</testCaseGuid>
+</TestCaseEntity>

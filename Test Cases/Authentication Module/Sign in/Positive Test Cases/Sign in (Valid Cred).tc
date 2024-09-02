@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>1. Valid Email and Password&#xd;
+   - Test Case: Enter a valid email address and correct password.&#xd;
+   - Expected Result: User successfully logs in and is redirected to the home page.</description>
+   <name>Sign in (Valid Cred)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e2aa5b12-aeef-41b1-bf6b-cab71f4a1702</testCaseGuid>
+</TestCaseEntity>

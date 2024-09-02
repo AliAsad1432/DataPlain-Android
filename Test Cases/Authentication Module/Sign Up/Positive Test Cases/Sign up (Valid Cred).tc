@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>1. Valid Input Test:&#xd;
+   - Test Case: Enter valid data in all fields (First Name, Last Name, Email, Password, Confirm Password) and tap the &quot;Sign Up&quot; button.&#xd;
+   - Expected Result: User is successfully registered, and a confirmation message is displayed.&#xd;
+</description>
+   <name>Sign up (Valid Cred)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>845aeab3-cd55-42bc-910b-ed286361ff7a</testCaseGuid>
+</TestCaseEntity>

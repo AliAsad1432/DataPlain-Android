@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Whitespace in Fields Test:&#xd;
+   - Test Case: Enter only whitespace characters in any of the fields.&#xd;
+   - Expected Result: The system should treat the fields as empty and display validation errors.</description>
+   <name>Sign Up (Whitespace in Fields)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f9e8ea1d-782d-4309-a411-32c01b6313d2</testCaseGuid>
+</TestCaseEntity>
