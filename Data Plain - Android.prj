@@ -6,12 +6,12 @@
    <UUID>f44f5af2-784c-4d92-9ed1-43d837c8c2a5</UUID>
    <createdEdition>FREE</createdEdition>
    <createdVersion>9.5.0</createdVersion>
-   <freeLicense>false</freeLicense>
+   <freeLicense>true</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
    <modifiedEdition>ENTERPRISE</modifiedEdition>
    <modifiedVersion>9.6.0</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>D:\DataPlain - Android\DataPlain-Android\Data Plain - Android.prj</projectFileLocation>
+   <projectFileLocation>D:\DataPlain - Android (Ali_Asad)\Data Plain - Android.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
