@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Test</name>
+   <name>Add Projects (Valid Cred)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>1339d0bd-0971-4009-80ac-85567c0753e2</testCaseGuid>
+   <testCaseGuid>17afa608-57bf-448e-8a9a-da0eb1ca2dae</testCaseGuid>
 </TestCaseEntity>
