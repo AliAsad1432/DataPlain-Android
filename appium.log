@@ -77,3 +77,5 @@
 [38;5;42m[7dd41b82][0m[38;5;-171m[AndroidUiautomator2Driver@9227][0m Unable to remove system port forward: Error executing adbExec. Original error: 'Command ''C:\\Users\\Ali Asad\\.katalon\\tools\\android_sdk\\platform-tools\\adb.exe' -P 5037 -s KV7PQ4IZB6FEAYBM forward --remove tcp\:8280' exited with code 1'; Command output: adb.exe: error: listener 'tcp:8280' not found
 
 [38;5;42m[7dd41b82][0m[38;5;-171m[AndroidUiautomator2Driver@9227][0m Restoring hidden api policy to the device default configuration
+[38;5;42m[7dd41b82][0m[38;5;86m[HTTP][0m [37m-->[39m [37mDELETE[39m [37m/wd/hub/session/7dd41b82-cb3b-4869-9641-08877517ebb9[39m [90m{}[39m
+[38;5;42m[7dd41b82][0m[38;5;86m[HTTP][0m [37m<-- DELETE /wd/hub/session/7dd41b82-cb3b-4869-9641-08877517ebb9 [39m[33m404[39m [90m151 ms - 3152[39m [90m[39m
