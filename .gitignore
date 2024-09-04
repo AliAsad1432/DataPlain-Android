@@ -1,8 +1,8 @@
 .gradle
 
-appium
+appium.log
 
-appium_error
+appium_error.log
 
 Reports
 
