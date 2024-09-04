@@ -83,11 +83,12 @@ if (Mobile.verifyElementExist(findTestObject('Object Repository/Projects Module/
     // Tap the first object
     Mobile.tap(findTestObject('Object Repository/Projects Module/Positive/android.widget.ImageView'), 0)
 
-    Mobile.tap(findTestObject('Object Repository/Projects Module/Positive/android.widget.Button (1)'), 0) // If the first object is not found, tap the second object directly
+    Mobile.tap(findTestObject('Object Repository/Projects Module/Positive/android.widget.Button (1)'), 0 // If the first object is not found, tap the second object directly
+        )
 } else {
-    Mobile.closeApplication()
+    String adbTapCommand = 'adb shell input tap 670 100'
 
-    Mobile.startExistingApplication('com.senarios.dataplain.dev')
+    Runtime.getRuntime().exec(adbTapCommand)
 
     Mobile.tap(findTestObject('Object Repository/Projects Module/Positive/android.widget.Button (1)'), 0)
 }
