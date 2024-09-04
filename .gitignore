@@ -1,5 +1,11 @@
 .gradle
 
+appium
+
+appium_error
+
+Reports
+
 bin
 
 Libs
