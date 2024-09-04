@@ -1,5 +1,9 @@
 .gradle
 
+appium.log
+
+appium_erro.log
+
 Reports
 
 bin
