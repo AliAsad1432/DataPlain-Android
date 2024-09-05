@@ -51,23 +51,23 @@ catch (Exception e) {
 
 Mobile.startExistingApplication('com.senarios.dataplain.dev')
 
-Mobile.tap(findTestObject('Sign in/android.widget.Button - ALLOW'), 0)
+Mobile.tap(findTestObject('Auth/Sign in/android.widget.Button - ALLOW'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Sign in/android.widget.Button'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 
-Mobile.setText(findTestObject('Object Repository/Sign in/android.widget.EditText'), 'Shahidkhan.com', 0)
-
-Mobile.pressBack()
-
-Mobile.setText(findTestObject('Sign in/n1/android.widget.EditText'), 'Sen@1234', 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign in/android.widget.EditText'), 'Shahidkhan.com', 0)
 
 Mobile.pressBack()
 
-Mobile.tap(findTestObject('Sign in/n1/android.widget.CheckBox'), 0)
+Mobile.setText(findTestObject('Auth/Sign in/n1/android.widget.EditText'), 'Sen@1234', 0)
 
-Mobile.tap(findTestObject('Sign in/n1/android.widget.Button'), 0)
+Mobile.pressBack()
 
-Mobile.verifyElementExist(findTestObject('Extras/android.view.View'), 0)
+Mobile.tap(findTestObject('Auth/Sign in/n1/android.widget.CheckBox'), 0)
+
+Mobile.tap(findTestObject('Auth/Sign in/n1/android.widget.Button'), 0)
+
+Mobile.verifyElementExist(findTestObject('Auth/Extras/android.view.View'), 0)
 
 Mobile.closeApplication()
 
@@ -75,21 +75,21 @@ Mobile.closeApplication()
 
 Mobile.startExistingApplication('com.senarios.dataplain.dev')
 
-Mobile.tap(findTestObject('Object Repository/Sign in/android.widget.Button'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 
-Mobile.setText(findTestObject('Object Repository/Sign in/android.widget.EditText'), 'Tahir@Gmail', 0)
-
-Mobile.pressBack()
-
-Mobile.setText(findTestObject('Sign in/n1/android.widget.EditText'), 'Sen@1234', 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign in/android.widget.EditText'), 'Tahir@Gmail', 0)
 
 Mobile.pressBack()
 
-Mobile.tap(findTestObject('Sign in/n1/android.widget.CheckBox'), 0)
+Mobile.setText(findTestObject('Auth/Sign in/n1/android.widget.EditText'), 'Sen@1234', 0)
 
-Mobile.tap(findTestObject('Sign in/n1/android.widget.Button'), 0)
+Mobile.pressBack()
 
-Mobile.verifyElementExist(findTestObject('Extras/android.view.View'), 0)
+Mobile.tap(findTestObject('Auth/Sign in/n1/android.widget.CheckBox'), 0)
+
+Mobile.tap(findTestObject('Auth/Sign in/n1/android.widget.Button'), 0)
+
+Mobile.verifyElementExist(findTestObject('Auth/Extras/android.view.View'), 0)
 
 Mobile.closeApplication()
 
@@ -97,21 +97,21 @@ Mobile.closeApplication()
 
 Mobile.startExistingApplication('com.senarios.dataplain.dev')
 
-Mobile.tap(findTestObject('Object Repository/Sign in/android.widget.Button'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 
-Mobile.setText(findTestObject('Object Repository/Sign in/android.widget.EditText'), 'Tester', 0)
-
-Mobile.pressBack()
-
-Mobile.setText(findTestObject('Sign in/n1/android.widget.EditText'), 'Sen@1234', 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign in/android.widget.EditText'), 'Tester', 0)
 
 Mobile.pressBack()
 
-Mobile.tap(findTestObject('Sign in/n1/android.widget.CheckBox'), 0)
+Mobile.setText(findTestObject('Auth/Sign in/n1/android.widget.EditText'), 'Sen@1234', 0)
 
-Mobile.tap(findTestObject('Sign in/n1/android.widget.Button'), 0)
+Mobile.pressBack()
 
-Mobile.verifyElementExist(findTestObject('Extras/android.view.View'), 0)
+Mobile.tap(findTestObject('Auth/Sign in/n1/android.widget.CheckBox'), 0)
+
+Mobile.tap(findTestObject('Auth/Sign in/n1/android.widget.Button'), 0)
+
+Mobile.verifyElementExist(findTestObject('Auth/Extras/android.view.View'), 0)
 
 Mobile.closeApplication()
 
@@ -119,21 +119,21 @@ Mobile.closeApplication()
 
 Mobile.startExistingApplication('com.senarios.dataplain.dev')
 
-Mobile.tap(findTestObject('Object Repository/Sign in/android.widget.Button'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 
-Mobile.setText(findTestObject('Object Repository/Sign in/android.widget.EditText'), 'Tester@.com', 0)
-
-Mobile.pressBack()
-
-Mobile.setText(findTestObject('Sign in/n1/android.widget.EditText'), 'Sen@1234', 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign in/android.widget.EditText'), 'Tester@.com', 0)
 
 Mobile.pressBack()
 
-Mobile.tap(findTestObject('Sign in/n1/android.widget.CheckBox'), 0)
+Mobile.setText(findTestObject('Auth/Sign in/n1/android.widget.EditText'), 'Sen@1234', 0)
 
-Mobile.tap(findTestObject('Sign in/n1/android.widget.Button'), 0)
+Mobile.pressBack()
 
-Mobile.verifyElementExist(findTestObject('Extras/android.view.View'), 0)
+Mobile.tap(findTestObject('Auth/Sign in/n1/android.widget.CheckBox'), 0)
+
+Mobile.tap(findTestObject('Auth/Sign in/n1/android.widget.Button'), 0)
+
+Mobile.verifyElementExist(findTestObject('Auth/Extras/android.view.View'), 0)
 
 Mobile.closeApplication()
 

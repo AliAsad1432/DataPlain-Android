@@ -51,27 +51,27 @@ catch (Exception e) {
 
 Mobile.startExistingApplication('com.senarios.dataplain.dev')
 
-Mobile.tap(findTestObject('Sign in/android.widget.Button - ALLOW'), 0)
+Mobile.tap(findTestObject('Auth/Sign in/android.widget.Button - ALLOW'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Sign in/android.widget.Button'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 
-Mobile.setText(findTestObject('Object Repository/Sign in/android.widget.EditText'), 'tester24@yopmail.com', 0)
-
-Mobile.pressBack()
-
-Mobile.setText(findTestObject('Object Repository/Sign in/android.widget.EditText (1)'), 'Pakistan@1', 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign in/android.widget.EditText'), 'tester24@yopmail.com', 0)
 
 Mobile.pressBack()
 
-Mobile.tap(findTestObject('Object Repository/Sign in/android.widget.CheckBox'), 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign in/android.widget.EditText (1)'), 'Pakistan@1', 0)
 
-Mobile.tap(findTestObject('Object Repository/Sign in/android.widget.Button (1)'), 0)
+Mobile.pressBack()
+
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.CheckBox'), 0)
+
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button (1)'), 0)
 
 Mobile.delay(8, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.verifyElementExist(findTestObject('Sign in/n1/android.view.View'), 0)
+Mobile.verifyElementExist(findTestObject('Auth/Sign in/n1/android.view.View'), 0)
 
-Mobile.verifyElementExist(findTestObject('Sign in/n1/android.widget.ImageView'), 0)
+Mobile.verifyElementExist(findTestObject('Auth/Sign in/n1/android.widget.ImageView'), 0)
 
 Mobile.delay(0.5, FailureHandling.STOP_ON_FAILURE)
 
@@ -132,7 +132,15 @@ Mobile.tap(findTestObject('Projects Module/Positive/1/android.widget.Button'), 0
 
 Mobile.pressBack()
 
-Mobile.scrollToText('Completion Date', FailureHandling.OPTIONAL)
+// Define the ADB command for scrolling up
+String adbScrollUpCommand = "adb shell input swipe 300 1000 300 500"
+
+// Execute the ADB command
+Runtime.getRuntime().exec(adbScrollUpCommand)
+
+// Wait for a few seconds to observe the scroll
+Mobile.delay(1)
+
 
 Mobile.tap(findTestObject('Projects Module/Positive/1/android.widget.ImageView (2)'), 0)
 
@@ -144,9 +152,7 @@ Mobile.tap(findTestObject('Projects Module/Positive/1/android.widget.ImageView (
 
 Mobile.delay(1, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/Projects Module/Positive/01/android.view.View'), 0)
-
-Mobile.verifyElementExist(findTestObject('Object Repository/Projects Module/Positive/01/android.view.View'), 0)
+Mobile.verifyElementExist(findTestObject('Object Repository/Projects Module/Positive/android.widget.Button (1)'), 0)
 
 Mobile.closeApplication()
 

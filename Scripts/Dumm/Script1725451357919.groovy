@@ -31,12 +31,20 @@ Mobile.delay(2)
 
 Mobile.tap(findTestObject('Object Repository/Dummy/android.widget.Button (1)'), 0)
 
-// Define the ADB command for scrolling down
-// Start near the top of the screen and swipe towards the bottom
-String adbScrollDownCommand = "adb shell input swipe 42 -870 42 1000"
+// Define the ADB command for scrolling up
+String adbScrollUpCommand = "adb shell input swipe 300 1000 300 500"
 
 // Execute the ADB command
-Runtime.getRuntime().exec(adbScrollDownCommand)
+Runtime.getRuntime().exec(adbScrollUpCommand)
+
+// Wait for a few seconds to observe the scroll
+Mobile.delay(2)
+
+//// Define the ADB command for scrolling down
+//String adbScrollDownCommand = "adb shell input swipe 300 500 300 1000"
+//
+//// Execute the ADB command
+//Runtime.getRuntime().exec(adbScrollDownCommand)
 
 // Wait for a few seconds to observe the scroll
 Mobile.delay(2)

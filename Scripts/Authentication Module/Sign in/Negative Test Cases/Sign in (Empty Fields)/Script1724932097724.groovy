@@ -51,17 +51,17 @@ catch (Exception e) {
 
 Mobile.startExistingApplication('com.senarios.dataplain.dev')
 
-Mobile.tap(findTestObject('Sign in/android.widget.Button - ALLOW'), 0)
+Mobile.tap(findTestObject('Auth/Sign in/android.widget.Button - ALLOW'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Sign in/android.widget.Button'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Sign in/android.widget.Button (1)'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button (1)'), 0)
 
 Mobile.delay(0.5, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.verifyElementExist(findTestObject('Extras-1/Sign-in (Empty Fields)/android.view.View'), 0)
+Mobile.verifyElementExist(findTestObject('Auth/Extras-1/Sign-in (Empty Fields)/android.view.View'), 0)
 
-Mobile.verifyElementExist(findTestObject('Extras-1/Sign-in (Empty Fields)/android.view.View (1)'), 0)
+Mobile.verifyElementExist(findTestObject('Auth/Extras-1/Sign-in (Empty Fields)/android.view.View (1)'), 0)
 
 Mobile.closeApplication()
 

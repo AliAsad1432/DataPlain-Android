@@ -51,33 +51,33 @@ catch (Exception e) {
 
 Mobile.startExistingApplication('com.senarios.dataplain.dev')
 
-Mobile.tap(findTestObject('Sign in/android.widget.Button - ALLOW'), 0)
+Mobile.tap(findTestObject('Auth/Sign in/android.widget.Button - ALLOW'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Sign in/android.widget.Button'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 
-Mobile.setText(findTestObject('Object Repository/Sign in/android.widget.EditText'), 'tester24@yopmail.com', 0)
-
-Mobile.pressBack()
-
-Mobile.setText(findTestObject('Object Repository/Sign in/android.widget.EditText (1)'), 'Pakistan@1', 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign in/android.widget.EditText'), 'tester24@yopmail.com', 0)
 
 Mobile.pressBack()
 
-Mobile.tap(findTestObject('Object Repository/Sign in/android.widget.Button (1)'), 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign in/android.widget.EditText (1)'), 'Pakistan@1', 0)
+
+Mobile.pressBack()
+
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button (1)'), 0)
 
 Mobile.delay(8, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.verifyElementExist(findTestObject('Sign in/n1/android.view.View'), 0)
+Mobile.verifyElementExist(findTestObject('Auth/Sign in/n1/android.view.View'), 0)
 
-Mobile.verifyElementExist(findTestObject('Sign in/n1/android.widget.ImageView'), 0)
+Mobile.verifyElementExist(findTestObject('Auth/Sign in/n1/android.widget.ImageView'), 0)
 
 Mobile.delay(0.5, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/Sign in/Remember Me/android.view.View'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/Remember Me/android.view.View'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Sign in/Remember Me/android.widget.ImageView'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/Remember Me/android.widget.ImageView'), 0)
 
-Mobile.verifyElementText(findTestObject('Object Repository/Sign in/Remember Me/android.widget.EditText - tester24yopmail.com'), 
+Mobile.verifyElementText(findTestObject('Object Repository/Auth/Sign in/Remember Me/android.widget.EditText - tester24yopmail.com'), 
     '')
 
 Mobile.closeApplication()

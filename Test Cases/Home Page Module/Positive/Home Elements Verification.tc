@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Description:&#xd;
+&#xd;&#xd;
+Verify that all key elements on the home page are displayed correctly, including the header, footer, navigation bar, search bar, main content area, and any interactive buttons or links.&#xd;
+&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+Expected Result:&#xd;
+&#xd;&#xd;
+All elements should be visible, properly aligned, functional, and match the design specifications. No missing elements or broken links/buttons should be present.</description>
+   <name>Home Elements Verification</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b75028fe-9cfe-46ac-aab0-2fa5851170bf</testCaseGuid>
+</TestCaseEntity>

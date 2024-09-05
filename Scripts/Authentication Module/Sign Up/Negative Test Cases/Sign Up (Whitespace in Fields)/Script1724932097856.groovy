@@ -51,35 +51,35 @@ catch (Exception e) {
 
 Mobile.startExistingApplication('com.senarios.dataplain.dev')
 
-Mobile.tap(findTestObject('Sign in/android.widget.Button - ALLOW'), 0)
+Mobile.tap(findTestObject('Auth/Sign in/android.widget.Button - ALLOW'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Sign in/android.widget.Button'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Sign Up/android.widget.Button'), 0)
-
-Mobile.delay(0.5, FailureHandling.STOP_ON_FAILURE)
-
-Mobile.setText(findTestObject('Object Repository/Sign Up/android.widget.EditText (2)'), '              ', 0)
-
-Mobile.pressBack()
-
-Mobile.setText(findTestObject('Object Repository/Sign Up/android.widget.EditText (3)'), '              ', 0)
-
-Mobile.pressBack()
-
-Mobile.setText(findTestObject('Sign Up/Negative/android.widget.EditText'), '              ', 0)
-
-Mobile.pressBack()
-
-Mobile.tap(findTestObject('Object Repository/Sign Up/android.widget.Button (1)'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign Up/android.widget.Button'), 0)
 
 Mobile.delay(0.5, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.verifyElementExist(findTestObject('Sign Up/Negative/android.view.View (5)'), 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign Up/android.widget.EditText (2)'), '              ', 0)
 
-Mobile.verifyElementExist(findTestObject('Sign Up/Negative/android.view.View (6)'), 0)
+Mobile.pressBack()
 
-Mobile.verifyElementExist(findTestObject('Sign Up/Negative/android.view.View (7)'), 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign Up/android.widget.EditText (3)'), '              ', 0)
+
+Mobile.pressBack()
+
+Mobile.setText(findTestObject('Auth/Sign Up/Negative/android.widget.EditText'), '              ', 0)
+
+Mobile.pressBack()
+
+Mobile.tap(findTestObject('Object Repository/Auth/Sign Up/android.widget.Button (1)'), 0)
+
+Mobile.delay(0.5, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.verifyElementExist(findTestObject('Auth/Sign Up/Negative/android.view.View (5)'), 0)
+
+Mobile.verifyElementExist(findTestObject('Auth/Sign Up/Negative/android.view.View (6)'), 0)
+
+Mobile.verifyElementExist(findTestObject('Auth/Sign Up/Negative/android.view.View (7)'), 0)
 
 Mobile.closeApplication()
 
