@@ -65,15 +65,16 @@ Mobile.setText(findTestObject('Object Repository/Auth/Sign Up/android.widget.Edi
 
 Mobile.pressBack()
 
-Mobile.setText(findTestObject('Object Repository/Auth/Sign Up/android.widget.EditText (2)'), 'tester24@yopmail.com', 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign Up/android.widget.EditText (2)'), 'TestingAccount2@yopmail.com', 
+    0)
 
 Mobile.pressBack()
 
-Mobile.setText(findTestObject('Object Repository/Auth/Sign Up/android.widget.EditText (3)'), 'Sen@1234', 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign Up/android.widget.EditText (3)'), 'Pakistan@1', 0)
 
 Mobile.pressBack()
 
-Mobile.setText(findTestObject('Object Repository/Auth/Sign Up/android.widget.EditText (4)'), 'Sen@1234', 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign Up/android.widget.EditText (4)'), 'Pakistan@1', 0)
 
 Mobile.pressBack()
 

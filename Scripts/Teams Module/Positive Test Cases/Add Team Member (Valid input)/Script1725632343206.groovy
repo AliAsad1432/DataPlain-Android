@@ -69,89 +69,42 @@ Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button 
 
 Mobile.delay(8, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.verifyElementExist(findTestObject('Auth/Sign in/n1/android.view.View'), 0)
-
 Mobile.verifyElementExist(findTestObject('Auth/Sign in/n1/android.widget.ImageView'), 0)
 
-Mobile.delay(0.5, FailureHandling.STOP_ON_FAILURE)
+Mobile.verifyElementExist(findTestObject(''), 0)
 
-Mobile.tap(findTestObject('Object Repository/Projects Module/Positive/android.widget.Button'), 0)
+Mobile.tap(findTestObject(''), 0)
 
-// Check if the first object is found
-if (Mobile.verifyElementExist(findTestObject('Object Repository/Projects Module/Positive/android.widget.ImageView'), 0, 
-    FailureHandling.OPTIONAL)) {
-    // Tap the first object
-    Mobile.tap(findTestObject('Object Repository/Projects Module/Positive/android.widget.ImageView'), 0)
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button'), 0)
 
-    Mobile.tap(findTestObject('Object Repository/Projects Module/Positive/android.widget.Button (1)'), 0 // If the first object is not found, tap the second object directly
-        )
-} else {
-    String adbTapCommand = 'adb shell input tap 670 100'
+Mobile.tap(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button'), 0)
 
-    Runtime.getRuntime().exec(adbTapCommand)
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (1)'), 0)
 
-    Mobile.tap(findTestObject('Object Repository/Projects Module/Positive/android.widget.Button (1)'), 0)
-}
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (2)'), 0)
 
-Mobile.tap(findTestObject('Projects Module/Positive/android.widget.Button - WHILE USING THE APP'), 0)
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Projects Module/Positive/android.widget.ImageView (1)'), 0)
+Mobile.setText(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText'), 'Test', 0)
 
-Mobile.tap(findTestObject('Object Repository/Projects Module/Positive/android.widget.ImageView (2)'), 0)
+Mobile.pressBack()
 
-Mobile.setText(findTestObject('Object Repository/Projects Module/Positive/android.widget.EditText'), 'Testing Project', 
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (1)'), 0)
+
+Mobile.setText(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (1)'), 'Member', 0)
+
+Mobile.pressBack()
+
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (2)'), 0)
+
+Mobile.setText(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (2)'), 'testmember@yopmail.com', 
     0)
 
 Mobile.pressBack()
 
-Mobile.setText(findTestObject('Object Repository/Projects Module/Positive/android.widget.EditText (1)'), 'Test1', 0)
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (4)'), 0)
 
-Mobile.pressBack()
-
-Mobile.setText(findTestObject('Object Repository/Projects Module/Positive/android.widget.EditText (2)'), 'Test12', 0)
-
-Mobile.pressBack()
-
-Mobile.setText(findTestObject('Object Repository/Projects Module/Positive/android.widget.EditText (3)'), 'Test02', 0)
-
-Mobile.pressBack()
-
-Mobile.setText(findTestObject('Object Repository/Projects Module/Positive/android.widget.EditText (4)'), 'Test13', 0)
-
-Mobile.pressBack()
-
-Mobile.tap(findTestObject('Projects Module/Positive/1/android.widget.ImageView'), 0)
-
-Mobile.tap(findTestObject('Projects Module/Positive/1/android.widget.Button'), 0)
-
-Mobile.pressBack()
-
-Mobile.tap(findTestObject('Projects Module/Positive/1/android.widget.ImageView (1)'), 0)
-
-Mobile.tap(findTestObject('Projects Module/Positive/1/android.widget.Button'), 0)
-
-Mobile.pressBack()
-
-// Define the ADB command for scrolling up
-String adbScrollUpCommand = 'adb shell input swipe 300 1000 300 500'
-
-// Execute the ADB command
-Runtime.getRuntime().exec(adbScrollUpCommand)
-
-// Wait for a few seconds to observe the scroll
-Mobile.delay(1)
-
-Mobile.tap(findTestObject('Projects Module/Positive/1/android.widget.ImageView (2)'), 0)
-
-Mobile.tap(findTestObject('Projects Module/Positive/1/android.widget.Button'), 0)
-
-Mobile.pressBack()
-
-Mobile.tap(findTestObject('Projects Module/Positive/1/android.widget.ImageView (3)'), 0)
-
-Mobile.delay(1, FailureHandling.STOP_ON_FAILURE)
-
-Mobile.verifyElementExist(findTestObject('Object Repository/Projects Module/Positive/android.widget.Button (1)'), 0)
+Mobile.tap(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (3)'), 0)
 
 Mobile.closeApplication()
 

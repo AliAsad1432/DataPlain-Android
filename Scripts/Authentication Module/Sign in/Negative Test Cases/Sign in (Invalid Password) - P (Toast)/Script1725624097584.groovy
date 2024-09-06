@@ -51,40 +51,52 @@ catch (Exception e) {
 
 Mobile.startExistingApplication('com.senarios.dataplain')
 
-// Perform initial actions
 Mobile.tap(findTestObject('Auth/Sign in/android.widget.Button - ALLOW'), 0)
 
 Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Auth/Sign Up/android.widget.Button'), 0)
-
-Mobile.delay(0.5, FailureHandling.STOP_ON_FAILURE)
-
-Mobile.tap(findTestObject('Object Repository/Auth/Sign Up/Negative/android.widget.EditText'), 0, FailureHandling.STOP_ON_FAILURE)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign in/android.widget.EditText'), 'tester20@yopmail.com', 0)
 
 Mobile.pressBack()
 
-Mobile.tap(findTestObject('Object Repository/Auth/Sign Up/Negative/android.widget.Button'), 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign in/android.widget.EditText (1)'), 'Pakistan@21', 0)
 
-Mobile.verifyElementExist(findTestObject('Object Repository/Auth/Sign Up/Negative/android.view.View'), 0)
+Mobile.pressBack()
 
-Mobile.verifyElementExist(findTestObject('Object Repository/Auth/Sign Up/Negative/android.view.View (1)'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.CheckBox'), 0)
 
-Mobile.verifyElementExist(findTestObject('Object Repository/Auth/Sign Up/Negative/android.view.View (2)'), 0)
+Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button (1)'), 0)
 
-// Define the ADB command for scrolling up
-String adbScrollUpCommand = 'adb shell input swipe 300 1000 300 500'
+Mobile.delay(1.2, FailureHandling.STOP_ON_FAILURE)
 
-// Execute the ADB command
-Runtime.getRuntime().exec(adbScrollUpCommand)
+// Execute the ADB command to capture toast messages
+Process process = Runtime.getRuntime().exec("adb logcat -d | grep -i 'Invalid password'")
 
-// Wait for a few seconds to observe the scroll
-Mobile.delay(1)
+// Capture the output of the command
+BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))
+String line
+boolean toastFound = false
 
-//Mobile.verifyElementExist(findTestObject('Object Repository/Auth/Sign Up/Negative/android.view.View (3)'), 0)
-Mobile.verifyElementExist(findTestObject('Object Repository/Auth/Sign Up/Negative/android.view.View (6)'), 0)
+// Read through the output and check if the toast message is present
+while ((line = reader.readLine()) != null) {
+	if (line.contains("Invalid password")) {
+		toastFound = true
+		break
+	}
+}
+reader.close()
 
-Mobile.verifyElementExist(findTestObject('Object Repository/Auth/Sign Up/Negative/android.view.View (8)'), 0)
+// Verify if the toast message was found
+if (toastFound) {
+	KeywordUtil.markPassed("Toast message 'Invalid password' is displayed as expected.")
+} else {
+	KeywordUtil.markFailed("Toast message 'Invalid password' is not displayed.")
+}
+
+
+Mobile.delay(0.5, FailureHandling.STOP_ON_FAILURE)
+
+
 
 Mobile.closeApplication()
 

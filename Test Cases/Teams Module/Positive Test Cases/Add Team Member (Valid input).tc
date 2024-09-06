@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>- **Description**: This test case verifies that a user can successfully add a new team member by providing valid data in all required fields (Name, Email, and Role).&#xd;
+  &#xd;
+- **Expected Result**: &#xd;
+  - The team member is successfully added to the system.&#xd;
+  - A success message is displayed confirming the addition.&#xd;
+  - The newly added team member appears in the team member list.&#xd;
+  - The user receives a confirmation email.&#xd;
+	&#xd;
+</description>
+   <name>Add Team Member (Valid input)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fcea14a8-719c-479c-97a2-369bdae741ff</testCaseGuid>
+</TestCaseEntity>

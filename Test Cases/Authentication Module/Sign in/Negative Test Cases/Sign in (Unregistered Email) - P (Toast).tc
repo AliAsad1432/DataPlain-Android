@@ -3,7 +3,7 @@
    <description>3. Unregistered Email&#xd;
    - Test Case: Enter an email that is not registered in the system with any password.&#xd;
    - Expected Result: An error message appears indicating that the email is not found, and the user is not logged in.</description>
-   <name>Sign in (Unregistered Email) - p</name>
+   <name>Sign in (Unregistered Email) - P (Toast)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>

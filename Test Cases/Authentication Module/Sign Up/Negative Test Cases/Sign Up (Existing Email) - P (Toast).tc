@@ -4,7 +4,7 @@
    - Test Case: Enter an email that is already registered in the system and valid data in all other fields.&#xd;
    - Expected Result: The system should display an error message indicating that the email is already in use.&#xd;
 </description>
-   <name>Sign Up (Existing Email) - P</name>
+   <name>Sign Up (Existing Email) - P (Toast)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
