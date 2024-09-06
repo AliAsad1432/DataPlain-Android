@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 // Replace 'your.package.name' with the actual package name of your application
-String packageName = 'com.senarios.dataplain.dev'
+String packageName = 'com.senarios.dataplain'
 
 // Command to clear cache
 String clearCacheCommand = 'adb shell pm clear ' + packageName

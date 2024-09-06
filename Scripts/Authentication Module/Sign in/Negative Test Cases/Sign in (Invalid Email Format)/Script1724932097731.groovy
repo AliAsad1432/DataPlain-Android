@@ -19,10 +19,10 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 // Replace 'your.package.name' with the actual package name of your application
-String packageName = 'com.senarios.dataplain.dev'
+String packageName = 'com.senarios.dataplain'
 
 // Command to clear cache
-String clearCacheCommand = 'adb shell pm clear ' + 'com.senarios.dataplain.dev'
+String clearCacheCommand = 'adb shell pm clear ' + 'com.senarios.dataplain'
 
 try {
     // Execute the command to clear cache and storage
@@ -43,13 +43,13 @@ try {
         KeywordUtil.logWarning('Error: ' + error)
     }
     
-    KeywordUtil.logInfo('Cache and storage cleared for package: ' + 'com.senarios.dataplain.dev')
+    KeywordUtil.logInfo('Cache and storage cleared for package: ' + 'com.senarios.dataplain')
 }
 catch (Exception e) {
     KeywordUtil.markFailed('Failed to clear cache and storage: ' + e.message)
 } 
 
-Mobile.startExistingApplication('com.senarios.dataplain.dev')
+Mobile.startExistingApplication('com.senarios.dataplain')
 
 Mobile.tap(findTestObject('Auth/Sign in/android.widget.Button - ALLOW'), 0)
 
@@ -73,7 +73,7 @@ Mobile.closeApplication()
 
 //2
 
-Mobile.startExistingApplication('com.senarios.dataplain.dev')
+Mobile.startExistingApplication('com.senarios.dataplain')
 
 Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 
@@ -95,7 +95,7 @@ Mobile.closeApplication()
 
 //3
 
-Mobile.startExistingApplication('com.senarios.dataplain.dev')
+Mobile.startExistingApplication('com.senarios.dataplain')
 
 Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 
@@ -117,7 +117,7 @@ Mobile.closeApplication()
 
 //4
 
-Mobile.startExistingApplication('com.senarios.dataplain.dev')
+Mobile.startExistingApplication('com.senarios.dataplain')
 
 Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 

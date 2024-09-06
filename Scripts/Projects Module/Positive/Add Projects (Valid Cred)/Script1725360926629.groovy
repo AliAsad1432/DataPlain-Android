@@ -19,10 +19,10 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 // Replace 'your.package.name' with the actual package name of your application
-String packageName = 'com.senarios.dataplain.dev'
+String packageName = 'com.senarios.dataplain'
 
 // Command to clear cache
-String clearCacheCommand = 'adb shell pm clear ' + 'com.senarios.dataplain.dev'
+String clearCacheCommand = 'adb shell pm clear ' + 'com.senarios.dataplain'
 
 try {
     // Execute the command to clear cache and storage
@@ -43,19 +43,19 @@ try {
         KeywordUtil.logWarning('Error: ' + error)
     }
     
-    KeywordUtil.logInfo('Cache and storage cleared for package: ' + 'com.senarios.dataplain.dev')
+    KeywordUtil.logInfo('Cache and storage cleared for package: ' + 'com.senarios.dataplain')
 }
 catch (Exception e) {
     KeywordUtil.markFailed('Failed to clear cache and storage: ' + e.message)
 } 
 
-Mobile.startExistingApplication('com.senarios.dataplain.dev')
+Mobile.startExistingApplication('com.senarios.dataplain')
 
 Mobile.tap(findTestObject('Auth/Sign in/android.widget.Button - ALLOW'), 0)
 
 Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button'), 0)
 
-Mobile.setText(findTestObject('Object Repository/Auth/Sign in/android.widget.EditText'), 'tester24@yopmail.com', 0)
+Mobile.setText(findTestObject('Object Repository/Auth/Sign in/android.widget.EditText'), 'tester20@yopmail.com', 0)
 
 Mobile.pressBack()
 
@@ -133,14 +133,13 @@ Mobile.tap(findTestObject('Projects Module/Positive/1/android.widget.Button'), 0
 Mobile.pressBack()
 
 // Define the ADB command for scrolling up
-String adbScrollUpCommand = "adb shell input swipe 300 1000 300 500"
+String adbScrollUpCommand = 'adb shell input swipe 300 1000 300 500'
 
 // Execute the ADB command
 Runtime.getRuntime().exec(adbScrollUpCommand)
 
 // Wait for a few seconds to observe the scroll
 Mobile.delay(1)
-
 
 Mobile.tap(findTestObject('Projects Module/Positive/1/android.widget.ImageView (2)'), 0)
 
