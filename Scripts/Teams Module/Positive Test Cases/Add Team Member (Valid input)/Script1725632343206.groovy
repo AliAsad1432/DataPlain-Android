@@ -18,35 +18,15 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-// Replace 'your.package.name' with the actual package name of your application
-String packageName = 'com.senarios.dataplain'
-
-// Command to clear cache
-String clearCacheCommand = 'adb shell pm clear ' + 'com.senarios.dataplain'
+String command = 'adb shell pm clear com.senarios.dataplain'
 
 try {
-    // Execute the command to clear cache and storage
-    def process = Runtime.getRuntime().exec(clearCacheCommand)
+    Runtime.getRuntime().exec(command)
 
-    process.waitFor()
-
-    // Log the output
-    def output = process.getInputStream().text
-
-    def error = process.getErrorStream().text
-
-    if (output) {
-        KeywordUtil.logInfo('Output: ' + output)
-    }
-    
-    if (error) {
-        KeywordUtil.logWarning('Error: ' + error)
-    }
-    
-    KeywordUtil.logInfo('Cache and storage cleared for package: ' + 'com.senarios.dataplain')
+    println('App data cleared and permissions revoked.')
 }
-catch (Exception e) {
-    KeywordUtil.markFailed('Failed to clear cache and storage: ' + e.message)
+catch (IOException e) {
+    e.printStackTrace()
 } 
 
 Mobile.startExistingApplication('com.senarios.dataplain')
@@ -69,42 +49,86 @@ Mobile.tap(findTestObject('Object Repository/Auth/Sign in/android.widget.Button 
 
 Mobile.delay(8, FailureHandling.STOP_ON_FAILURE)
 
+Mobile.verifyElementExist(findTestObject('Auth/Sign in/n1/android.view.View'), 0)
+
 Mobile.verifyElementExist(findTestObject('Auth/Sign in/n1/android.widget.ImageView'), 0)
 
-Mobile.verifyElementExist(findTestObject(''), 0)
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.ImageView'), 0)
 
-Mobile.tap(findTestObject(''), 0)
+Mobile.tap(findTestObject('Object Repository/Teams Module/Positive/android.widget.ImageView'), 0)
 
 Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button'), 0)
 
 Mobile.tap(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button'), 0)
 
-Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (1)'), 0)
-
-Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (2)'), 0)
-
 Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText'), 0)
 
-Mobile.setText(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText'), 'Test', 0)
+Mobile.setText(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText'), 'Dummy', 0)
 
 Mobile.pressBack()
 
 Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (1)'), 0)
 
-Mobile.setText(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (1)'), 'Member', 0)
+Mobile.setText(findTestObject('Teams Module/Positive/android.widget.EditText (1)'), 'Account', 0)
 
 Mobile.pressBack()
 
 Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (2)'), 0)
 
-Mobile.setText(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (2)'), 'testmember@yopmail.com', 
+Mobile.setText(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (2)'), 'Dummy4@mail.com', 
     0)
 
 Mobile.pressBack()
 
-Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (4)'), 0)
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (1)'), 0)
+
+Mobile.tap(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (1)'), 0)
+
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (2)'), 0)
+
+Mobile.tap(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (2)'), 0)
+
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (3)'), 0)
+
+Mobile.setText(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (3)'), '3640294845896', 0)
+
+Mobile.pressBack()
+
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (4)'), 0)
+
+Mobile.setText(findTestObject('Object Repository/Teams Module/Positive/android.widget.EditText (4)'), '923056666666', 0)
+
+Mobile.pressBack()
+
+Mobile.verifyElementExist(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (3)'), 0)
 
 Mobile.tap(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (3)'), 0)
+
+int xStart = 300
+
+int yStart = 1000
+
+int yEnd = yStart - 1200
+
+String adbScrollUpCommand = "adb shell input swipe $xStart $yStart $xStart $yEnd"
+
+Runtime.getRuntime().exec(adbScrollUpCommand)
+
+Mobile.delay(1)
+
+Mobile.verifyElementVisible(findTestObject('Object Repository/Teams Module/Positive/android.widget.Button (4)'), 0)
+
+Mobile.tap(findTestObject('Teams Module/Positive/android.widget.Button (4)'), 0)
+
+Mobile.verifyElementExist(findTestObject('Teams Module/Positive/android.widget.Button (5)'), 0)
+
+Mobile.tap(findTestObject('Teams Module/Positive/android.widget.Button (5)'), 0)
+
+Mobile.delay(2, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.verifyElementExist(findTestObject('Teams Module/Positive/android.widget.Button'), 0)
+
+Mobile.delay(0.5, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.closeApplication()
 
