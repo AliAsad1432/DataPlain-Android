@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>- **Description**: This test case verifies that a user can successfully add a new WBS by providing valid data in all required fields Work Name, Site Location, Type of Work, % Weightage, % Completion, Target Start Date &amp; Target End Date).&#xd;
+  &#xd;
+- **Expected Result**: &#xd;
+  - The WBS is successfully added to the system.&#xd;
+  - A success message is displayed confirming the addition.&#xd;
+  - The newly added WBS appears in the WBS list.&#xd;
+  - The connected users receives a confirmation added toast.&#xd;
+	&#xd;
+</description>
    <name>New Test Case</name>
    <tag></tag>
    <comment></comment>
